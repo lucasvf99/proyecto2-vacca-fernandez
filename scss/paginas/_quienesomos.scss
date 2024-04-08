@@ -1,0 +1,318 @@
+
+.box-img{
+    
+    background-image: url(../imagenes/bonifati-pueblo.jpeg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 0px ;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+        .span-raices{
+            display: block;
+        }
+        h2{
+            text-align: start;
+            margin-left: 5%;
+            color: white;
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            font-size: 3rem;
+        }
+}
+
+            /*Main viaje a italia */
+
+.box-stacion{
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    background-color: #2B2B2B;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 50px;
+        .img-train{
+        width: 130%;
+        margin: 30px 100px 20px -300px;
+            img{
+                width: 100%;
+            }
+        }
+        .box-text-train{
+            padding: 10px 10px;
+            font-size: 20px;
+                h3{
+                    font-size: 40px ;
+                    margin-bottom: 20px;
+                }
+        }
+}
+
+
+/*Apertura todo el año */
+
+.open-year{
+    background-color: white;
+    color: #2B2B2B;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    padding: 70px 0px;
+    margin: 0px 0px;
+        .box-img-frente{
+            width: 96%;
+            height: 100%;
+            background-image: url(../imagenes/local-capo-frente.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 30px 30px;
+        
+        }
+        
+        .box-text-local{
+            padding: 10px 20px;
+            div:first-child {
+                margin-bottom: 20px;
+            }
+            h2{
+                margin-bottom: 1rem;
+            }
+        }
+}
+
+
+/*Meriendas y Tardeo */
+.meriendas-sect{
+    background-color: white;
+    display: flex;
+    flex-direction: column-reverse;
+        .carrusel-img{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,25%);
+        height: 100vh;
+        row-gap: 2rem;
+        width: 100%;
+        padding: 10px 10px 200px 10px;
+            div{
+                width: 100%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+            }
+            
+            .sello-marron{
+                width: 60% !important;
+                justify-self: center;
+                margin-left: 200px;
+                    img{
+                        width: 40% !important;
+                    }
+            }
+    }
+        .box-text-merienda{
+            padding: 0px 1rem;
+            font-size: 18px;
+            margin-bottom: 20px;
+                h2{
+                    margin-bottom: 10px;
+                }
+                p{
+                    margin-bottom: 1rem;
+                }
+        }
+}
+
+
+/*MEDIA  QUERY  QUIENES SOMOS */
+
+@media screen and (min-width: 600px){
+    .nav-img{
+        width: 30%;
+    }
+}
+@media screen and  (min-width: 1024px){
+    
+    /*NAV*/
+
+    header{
+        nav{
+            .nav-img{
+                width: 70%;
+                margin-left: 30px;
+                    img{
+                        width: 10%;
+                    }
+            }
+         
+            .ul-nav{
+                width: 35%;
+            }
+        }
+    }
+
+    /*section Honor raices */
+    .box-img{
+        height: 80vh;
+            h2{
+                font-size: 50px;
+            }
+            span{
+                font-size: 60px;
+                margin-left: 30px;
+            }
+    }
+  
+
+    /*VIAJE A ITALIA */
+
+    .box-stacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 10px;
+            .box-train{
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            align-items: center;
+                .img-train {
+                width: 100%;
+                margin: 10px 400px 0px 0px;
+                    img{
+                        width: 100%;
+                    }
+                }  
+                 .box-text-train{
+                     width: 50%;
+                        p{
+                            margin-bottom: 30px;
+                        }
+                        h3{
+                            font-size: 55px;
+                        }
+                 }
+        }
+            .img-estacion {
+                 width: 40%;
+            }
+    }
+
+   
+
+    /*Abierto todo el año */
+
+    .open-year{
+        flex-direction: row;
+            .box-text-local{
+                font-size: 20px;
+                width: 70%;
+                margin: 100px;
+                    h2{
+                        font-size: 40px;
+                    }
+            }
+ }
+
+
+    /*MERIENDAS */
+  
+    .meriendas-sect{
+        display: flex;
+        flex-direction: row;
+        justify-content: center ;
+        padding: 100px 30px 30px 0px ;
+            .box-text-merienda{
+                margin: 90px 40px 10px 20px;
+                padding: 0px 30px ;
+                    h2{
+                        font-size: 3rem;
+                        color:#2B2B2B;
+                        margin-bottom: 30px;
+                    }
+            }
+            .carrusel-img{
+                width: 100%;
+                grid-template-columns: repeat(2,50%);
+                grid-template-rows: repeat(3,40%);
+                column-gap: 30px;
+                row-gap: 15px;
+                grid-template-areas: 
+                "kmix jungly"
+                "kmix oreo"
+                "sello . ";
+                object-fit: cover;
+                    .kmix-img{
+                        grid-area: kmix;
+                        width: 100%;
+                        height: 100%;
+                            img{
+                                width: 100%;
+                                height: 60vh;
+                            }
+                    }
+                                    
+                    .jungly-img {
+                        grid-area: jungly;
+                    }
+                      .oreo-img{
+                        grid-area: oreo;
+                    }
+                    .sello-marron{
+                            grid-area: sello;
+                            width: 40% !important;
+                            height: 65%;
+                            margin: -90px 300px 60px 0px ;
+                                img{
+                                    width: 100% !important;
+                                }
+                    }
+            }
+      
+    }
+
+  
+        /*FOOTER*/
+    footer{
+        .cont-footer{
+            flex-direction: row;
+            padding-bottom: 40px;
+            font-size: 20px;
+            color: white;
+            .foot-info {
+                 ul{
+                    li{
+                        a  {
+                        color: white;
+                        }   
+                    } 
+                 } 
+            }
+            
+     }
+    }
+   
+
+    /*carrusel*/
+
+.carousel-item img {
+    height: 80vh;
+    object-fit: cover;
+}
+}

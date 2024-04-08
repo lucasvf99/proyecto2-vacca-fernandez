@@ -1,0 +1,155 @@
+body{
+    background-color: white;
+}
+.caja-titulo {
+    background-color: #7fba9f;
+    height: 300px;
+       div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+                h3{
+                    font-size: 30px;
+                    margin-top: 70px;
+                    margin-bottom: 0px;
+                }
+                h2{
+                    font-size: 40px;
+                    margin-top: 15px;
+                }
+            }
+}
+
+.separador-auto{
+    width: 100%;
+    margin: 20px 0px;
+    img{
+        width: 100%;
+    }
+}
+.main-pedidos{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .cajas-pedidos{
+        display: flex;
+        justify-content: center;
+        column-gap: 20px;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+        color: #fdfd96;
+            .contenedor-tarrina{
+                position: relative;
+                }
+            div{
+                width: 100%;
+            }
+            .tarrinas-img{
+                background-image: url(../../imagenes/pedidos/Tarrinas\ \(1\).jpg);
+                object-fit: cover;
+                height: 60vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+                background-size: cover;
+                background-position: 50%;
+                position: relative;
+                filter: brightness(0.8);
+                    h4{
+                        filter: brightness(2) !important;
+                    }
+            }
+       /*
+        .tarrinas-img:hover{
+            will-change: transform;
+            transform: scale(1.1) translateY(6%);
+    
+        }*/
+        .copas-img{
+            background-image: url(../../imagenes/pedidos/Copa-al-gusto.jpg);
+            object-fit: cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px;
+            background-size: cover;
+            background-position: 50%;
+        }
+    }
+}
+
+
+
+            /*BATIDOS Y SMOOTIES */
+
+.contenedor-batidos{
+    margin: 50px 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+        div{
+            h2{
+                font-size: 50px;
+            }
+        }
+}
+.batidos-smooties{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 0px;
+    row-gap: 40px;
+    text-align: start;
+        .batido-item{
+            width:90%;
+            display: flex;
+            flex-direction: column;
+            div{
+                a{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+}
+.tartas-postres{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+        .postre-item{
+            width: 100%;
+            div{
+                h3{
+                    font-size: 25px;
+                }
+                img{
+                    width: 80%;
+                }
+            }
+        }
+}
+
+/*PRODUCTOS */
+
+.productos-item{
+    margin: 100px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    
+        .img-producto{
+            width: 40%;
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+        }
+}
+
+
+
