@@ -1,7 +1,163 @@
+//import
+@import "../variables/variables";
+//mixin
+@import "../variables/mixin";
+
 /*CONTACTO*/
 .contacto-seccion{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 50px;
+    width: 100%;
+    margin: auto;
+    padding: 50px;
+        .info-contacto{
+            width: 70%;
+                h3{
+                    @include font-h3;
+                }
+                ul{
+                    text-align: center;
+                    list-style: none;
+                    
+                    li{
+                        margin-bottom: 10px;
+                        a {
+                            font-style: none;
+                            text-decoration: none;
+                            color: $color-nav;
+                        }
+                    }
+                }
+        }
+        .img-contacto{
+            width: 350px;
+            margin: auto;
+                img{
+                    width: 100%;
+                }
+        }
+  
+}
+
+
+
+.separador-auto{
+    padding: 0px 60px;
+    display: none;
+}
+
+//Formulario
+
+.formulario-seccion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        .formulario-campos{
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            padding: 80px;
+            margin: auto;
+            background-color: $color-nav;
+            box-shadow: 7px 13px 37px $color-nav;
+                h4{
+                    color: $color-principal;
+                    font-size:28px;
+                    margin-bottom: 15px;
+                }
+                    .inputs-formulario{
+                        margin-bottom: 10px;
+                        background-color: $color-nav;
+                        color: $color-principal;
+                        border-radius: 4px;
+                        font-family: "calibri";
+                        border: 1px solid #1f53c5;
+                        padding: 10px;
+                    }
+                    .msj-input{
+                        height: 100px;
+                        text-align:initial;
+                        text-align: inherit;
+                    }
+                    p{
+                        color: $color-principal;
+                        line-height: 40px;
+                            a{
+                                text-decoration: none;
+                                color: $color-principal;
+                            }
+                            a:hover {
+                                text-decoration: underline;
+                            }
+                    }
+                    button{
+                        width: 50%;
+                        margin: auto;
+                        padding: 5px;
+                        background-color: #1f53c5;
+                        color: $color-principal;
+                    }
+        }
+        .map-formulario{    
+            width: 100%;
+            margin: 30px 50px;
+                iframe{
+                    width: 100%;
+                }
+        }
+}
+
+@media screen and (min-width: 600px){
+
+    .img-contacto{
+        width: 500px !important;
+            
+    }
+    .formulario-seccion{
+        margin: 50px 10px ;
+            .formulario-campos{
+                width: 100% !important;
+                margin: 50px 10px !important;
+            }
+            .map-formulario{
+                margin-bottom: 50px !important;
+            }
+    }
+  
+ 
+   
+
+}
+
+@media screen and (min-width: 1040px){
+    .contacto-seccion{
+        flex-direction: row;
+        margin: auto !important;
+        width: 80%;
+        gap: 150px ;
+            .info-contacto{
+                width: 40%;
+            }
+            .img-contacto{
+                width: 50% !important;
+                margin: auto !important;
+                padding: 10px;
+            }
+    }
+
+    .formulario-seccion{
+        width: 100%;
+        flex-direction: row;
+            .formulario-campos{
+                width: 50% !important;
+                margin: 50px 10px !important;
+        
+            }
+            .map-formulario{
+                margin-bottom: 50px !important;
+            }
+    }
 }

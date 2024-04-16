@@ -1,3 +1,6 @@
+//variables
+@import "../variables/variables";
+
 
 .box-img{
     
@@ -50,6 +53,9 @@
                 h3{
                     font-size: 40px ;
                     margin-bottom: 20px;
+                }
+                P{
+                    color: $color-principal;
                 }
         }
 }

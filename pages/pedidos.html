@@ -6,39 +6,53 @@
     <title>Document</title>
     <!--css-->
     <link rel="stylesheet" href="../css/estilos.css">
+     <!--boostrap-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Namdhinggo:wght@400;500;600;700;800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Slackside+One&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     <!--HEADER-->
     <header>
-        <nav>
-                    
-     <div class="nav-img">
-        <img src="../imagenes/LOGO.svg" alt="logo coder">
-     </div>
-
-
-            <div class="ul-nav">
-                <ul>
-                    <li>
-                        <a href="../index.html" class="linkNav">HOME</a>
-                    </li>
-                        <li >
-                            <a href="./pedidos.html" class="linkNav"> PEDIDOS</a>
-                        </li>
-                            <li>
-                                <a href="./contacto.html" class="linkNav">CONTACTO</a>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                  <div class="logo-boton">
+                      <div>
+                        <a class="navbar-brand" href="../index.html"><img src="../imagenes/LOGO.svg" ></a>
+                      </div>
+                          <div> 
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+                          </div>
+                  </div>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                          <ul class="navbar-nav">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="../index.html">HOME</a>
                             </li>
-                                <li>
-                                <a href="./quienessomos.html" class="linkNav">QUIENES SOMOS</a>
-                                </li>
-                            <li>
-                            <a href="./ayuda.html" class="linkNav">AYUDA</a>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./quienessomos.html">QUIENES SOMOS </a>
                             </li>
-                </ul>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./pedidos.html">PEDIDOS</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./contacto.html">CONTACTO</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./sabores.html">SABORES</a>
+                            </li>
+                          </ul>
+              </div>
             </div>
-        </nav>
+          </nav>
+        </header>
 
-</header>
 
 <!--Pide lo que quieras -->
 
@@ -60,20 +74,18 @@
             <h2>Helados Artesanales </h2>
         </div>
              <div class="cajas-pedidos">
-                  <div class="contenedor-tarrina">
-                    <div class="tarrinas-img">
-                        <h4>Tarrinas </h4>
-               </div> 
-                  </div>
-                        <div class="copas-img">
-                            <h4>Copas al Gusto </h4>
-                        </div>
+                          <div class="tarrinas-img">
+                                <h4>Tarrinas </h4>
+                            </div>   
+                                <div class="copas-img">
+                                    <h4>Copas al Gusto </h4>
+                                </div>
              </div>
     </main>
                     <!--Separador -->
 
     <div class="separador-auto">
-        <img src="../imagenes/separador-auto.png" alt="separador-auto">
+        <img src="../imagenes/pedidos/separador.png" alt="separador-auto">
     </div>
 
                     <!--Bebidas y smooties -->
@@ -87,78 +99,78 @@
             <div class="batido-item">
                 <div>
                     <a href="">
-                        <img src="../imagenes/batido-capomostro.jpg" alt="">
+                        <img src="../imagenes/pedidos/batido-capoMostro.jpg" alt="">
                     </a>
                 </div>
                     <div>
-                        <p>Batido capomostro</p>
-                        <p>Precio ..</p>
+                        <p>BATIDO CAPOMOSTRO</p>
+                        <p class="estilo-precio">Precio 6,20€</p>
                     </div>
             </div>
             <div class="batido-item">
                     <div>
                         <a href="">
-                            <img src="../imagenes/batido-capomostro.jpg" alt="">
+                            <img src="../imagenes/pedidos/batido-gelato.jpg" alt="batido-gelato">
                         </a>
                     </div>
                         <div>
-                            <p>Batido capomostro</p>
-                            <p>Precio ..</p>
+                            <p>BATIDO DI GELATO</p>
+                            <p class="estilo-precio">Precio 4,10€ - 4,90€</p>
                         </div>
             </div>
             <div class="batido-item">
                 <div>
                     <a href="">
-                        <img src="../imagenes/batido-capomostro.jpg" alt="">
+                        <img src="../imagenes/pedidos/batido-tropical.jpg" alt="batido-tropical">
                     </a>
                 </div>
                     <div>
-                        <p>Batido capomostro</p>
-                        <p>Precio ..</p>
+                        <p>BATIDO TROPICAL</p>
+                        <p class="estilo-precio">Precio 3,50€ - 4,30€</p>
                     </div>
             </div>
             <div class="batido-item">
                 <div>
                     <a href="">
-                        <img src="../imagenes/batido-capomostro.jpg" alt="">
+                        <img src="../imagenes/pedidos/batido-smotie.jpg" alt="smootie-img">
                     </a>
                 </div>
                     <div>
-                        <p>Batido capomostro</p>
-                        <p>Precio ..</p>
+                        <p>SMOOTHIE</p>
+                        <p class="estilo-precio">Precio 3.90€</p>
                     </div>
             </div>
             <div class="batido-item">
                 <div>
                     <a href="">
-                        <img src="../imagenes/batido-capomostro.jpg" alt="">
+                        <img src="../imagenes/pedidos/granizada.jpg" alt="granizada-img">
                     </a>
                 </div>
                     <div>
-                        <p>Batido capomostro</p>
-                        <p>Precio ..</p>
+                        <p>GRANIZADA</p>
+                        <p class="estilo-precio">Precio 2,40€ - 5,00€</p>
                     </div>
             </div>
             <div class="batido-item">
                 <div>
                     <a href="">
-                        <img src="../imagenes/batido-capomostro.jpg" alt="">
+                        <img src="../imagenes/pedidos/capoccino.jpg" alt="capoccino-img">
                     </a>
                 </div>
                     <div>
-                        <p>Batido capomostro</p>
-                        <p>Precio ..</p>
+                        <p>CAPOCCINO</p>
+                        <p class="estilo-precio">Precio 3,70€ - 4,20€  </p>
                     </div>
             </div>
             <div class="batido-item"> 
                 <div>
                     <a href="">
-                        <img src="../imagenes/batido-capomostro.jpg" alt="">
+                        <img src="../imagenes/pedidos/blanco y negro.jpg" alt="blanco-negro-img">
                     </a>
                 </div>
                     <div>
-                        <p>Batido capomostro</p>
-                        <p>Precio ..</p>
+                        <p>BLANCO Y NEGRO</p>
+                        <p class="estilo-precio">Precio 3,70€ - 4,20€ </p>
                     </div>
             </div>
         </div>
@@ -167,7 +179,7 @@
     <!--separador-->
 
     <div class="separador-auto">
-        <img src="../imagenes/separador-auto.png" alt="separador-auto">
+        <img src="../imagenes/pedidos/separador.png" alt="separador-auto">
     </div>
     <!--TARTAS -->
 
@@ -183,8 +195,8 @@
                     </a>
                 </div>
                     <div>
-                        <h3>Tarta Artesana Red Velvet</h3>
-                        <p>Precio ..</p>
+                        <h3>TARTA ARTESANA RED VELVET</h3>
+                        <p>Precio : 4,50 </p>
                     </div>
             </div>
                     <div class="postre-item">
@@ -194,8 +206,8 @@
                                 </a>
                             </div>
                                 <div>
-                                    <h3>Tarta Artesana Carrot Cake</h3>
-                                    <p>Precio ..</p>
+                                    <h3>TARTA ARTESANA CARROT CAKE</h3>
+                                    <p>Precio: 4.50</p>
                                 </div>
                     </div>
                             <div class="postre-item">
@@ -205,8 +217,8 @@
                                     </a>
                                 </div>
                                     <div>
-                                        <h3>Tarta Artesana Muerte por Chocolate</h3>
-                                        <p>Precio ..</p>
+                                        <h3>TARTA ARTESANA MUERTE POR CHOCOLATE</h3>
+                                        <p>Precio: 4.50</p>
                                     </div>
                             </div>
                                     <div class="postre-item">
@@ -216,8 +228,8 @@
                                             </a>
                                         </div>
                                             <div>
-                                                <h3>Tarta Artesana De la Nonna</h3>
-                                                <p>Precio ..</p>
+                                                <h3>TARTA ARTESANA DE LA NONNA </h3>
+                                                <p>Precio: 4.50</p>
                                             </div>
                                     </div>
                                             <div class="postre-item">
@@ -227,8 +239,8 @@
                                                     </a>
                                                 </div>
                                                     <div>
-                                                        <h3>Tarta CheeseCake de Pistacho </h3>
-                                                        <p>Precio ..</p>
+                                                        <h3>TARTA CHEESCAKE DE PISTACHO  </h3>
+                                                        <p>Precio: 4.50</p>
                                                     </div>
                                             </div>
                                                     <div class="postre-item">
@@ -238,8 +250,8 @@
                                                             </a>
                                                         </div>
                                                             <div>
-                                                                <h3>Tarta CheeseCake de Fresa </h3>
-                                                                <p>Precio ..</p>
+                                                                <h3>TARTA CHEESECAKE DE FRESA</h3>
+                                                                <p>Precio: 4.50</p>
                                                             </div>
                                                     </div>
                                                             <div class="postre-item"> 
@@ -249,8 +261,8 @@
                                                                     </a>
                                                                 </div>
                                                                     <div>
-                                                                        <h3>Tarta CheeseCake de Dulce de Leche</h3>
-                                                                        <p>Precio ..</p>
+                                                                        <h3>TARTA CHEESCAKE DULCE DE LECHE</h3>
+                                                                        <p>Precio: 4.50</p>
                                                                     </div>
                                                             </div>
 
@@ -261,8 +273,8 @@
                                                                             </a>
                                                                         </div>
                                                                             <div>
-                                                                                <h3>Tarta CheeseCake de Kinder Bueno </h3>
-                                                                                <p>Precio ..</p>
+                                                                                <h3>TARTA CHEESCAKE KINDER BUENO  </h3>
+                                                                                <p>Precio: 4.50</p>
                                                                             </div>
                                                                     </div>
                                                         
@@ -273,8 +285,8 @@
                                                                 </a>
                                                             </div>
                                                                 <div>
-                                                                    <h3>Tartaleta Artesana de Limon </h3>
-                                                                    <p>Precio ..</p>
+                                                                    <h3>TARTALETA DE LIMON  </h3>
+                                                                    <p>Precio: 4.50</p>
                                                                 </div>
                                                         </div>
 
@@ -285,8 +297,8 @@
                                                     </a>
                                                 </div>
                                                     <div>
-                                                        <h3>Cokie Artesana Gigante</h3>
-                                                        <p>Precio ..</p>
+                                                        <h3>COKE ARTESANA GIGANTE</h3>
+                                                        <p>Precio: 4.50</p>
                                                     </div>
                                             </div>
                                 <div class="postre-item"> 
@@ -296,7 +308,7 @@
                                         </a>
                                     </div>
                                         <div>
-                                            <h3>Biscolato con Gelato </h3>
+                                            <h3>BISCOLATO CON GELATO</h3>
                                             <p>Precio ..</p>
                                         </div>
                                 </div>
@@ -308,7 +320,7 @@
                                 </a>
                             </div>
                                 <div>
-                                    <h3>Copeta Brownie con Gelato</h3>
+                                    <h3>COPETA BROWNIE CON GELATO </h3>
                                     <p>Precio ..</p>
                                 </div>
                         </div>
@@ -320,7 +332,7 @@
                         </a>
                     </div>
                         <div>
-                            <h3>Palmera Artesana Gigante</h3>
+                            <h3>PALMERA ARTESANA GIGANTE</h3>
                             <p>Precio ..</p>
                         </div>
                 </div>
@@ -331,7 +343,7 @@
                 </a>
             </div>
                 <div>
-                    <h3>Palmera Artesana con Gelato</h3>
+                    <h3>PALMERA ARTESANA CON GELATO</h3>
                     <p>Precio ..</p>
                 </div>
         </div>
@@ -342,7 +354,7 @@
         </a>
     </div>
         <div>
-            <h3>Pila de Tortitas con Gelato</h3>
+            <h3>PILA DE TORTITAS CON GELATO </h3>
             <p>Precio ..</p>
         </div>
 </div>
@@ -353,7 +365,7 @@
                 </a>
             </div>
                 <div>
-                    <h3>Crepe</h3>
+                    <h3>CREPE</h3>
                     <p>Precio ..</p>
                 </div>
         </div>
@@ -364,7 +376,7 @@
                         </a>
                     </div>
                         <div>
-                            <h3>Crepe con Gelato</h3>
+                            <h3>CREPE CON GELATO</h3>
                             <p>Precio ..</p>
                         </div>
                 </div>
@@ -375,7 +387,7 @@
                                 </a>
                             </div>
                                 <div>
-                                    <h3>Alfajor de Maicena</h3>
+                                    <h3>ALFAJOR DE MAICENA</h3>
                                     <p>Precio ..</p>
                                 </div>
                         </div>
@@ -386,7 +398,7 @@
 
 <footer>
     <div class="separator-footer">
-      <img src="./imagenes/separador-footer.svg" alt="separator-footer">
+      <img src="../imagenes/Captura de pantalla (7).png" alt="separator-footer">
     </div>
           <div class="cont-footer">
               <div class="foot-info">
@@ -425,6 +437,8 @@
                            </div>
           </div>
 </footer>
+<!--JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 </html>

@@ -1,0 +1,89 @@
+//import 
+@import "../variables/mixin";
+
+
+//titulo sabor
+.titulo-sabores{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+        h2{
+            font-size: 60px;
+            font-family: "DM Serif Display", serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-bottom: 100px;
+            text-shadow: 15px 20px 10px $color-nav  ;
+        }
+}
+
+.sabores-grid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(23,1fr);
+            .sabores-helado{
+                @include medidas-mobile;
+                h3{
+                @include font;
+                }
+                div{
+                    width: 80%;
+                    margin: auto;
+                        img{
+                            width: 100%;
+                        }
+                }
+        }
+        .sabores-helado:hover{
+            width: 70%;
+            box-shadow: 1px 15px 37px $color-nav;
+                h2{
+                    font-size: 35px;
+                }
+            
+       }
+
+}
+
+
+@media screen and (min-width: 600px){
+      
+        .sabores-grid{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(14,1fr);
+            column-gap: 30px;
+                .sabores-helado{
+                        width: 80%;
+                            h3{
+                                width: 100%;
+                            }
+                       
+                        
+                }
+                .sabores-helado:hover{
+                    width: 100%; 
+                        h3{
+                            font-size: 30px;
+                        }
+                }
+        }
+
+    
+    }
+
+    @media screen and (min-width: 1040px){
+            .sabores-grid{
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(8,1fr);
+                margin: 100px;
+                    .sabores-helado{
+                        width: 90%;
+                            h3{
+                                width: 100%;
+                            }
+
+                    }
+          
+          }
+    }

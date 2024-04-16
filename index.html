@@ -20,35 +20,40 @@
 </head>
 <body>
     <header>
-                <nav>
-                            
-             <div class="nav-img">
-                <img src="./imagenes/LOGO.svg" alt="logo coder">
-             </div>
-
-
-                    <div class="ul-nav">
-                        <ul>
-                            <li>
-                                <a href="./index.html" class="linkNav">HOME</a>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                  <div class="logo-boton">
+                      <div>
+                        <a class="navbar-brand" href="../index.html"><img src="../imagenes/LOGO.svg" ></a>
+                      </div>
+                          <div> 
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+                          </div>
+                  </div>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                          <ul class="navbar-nav">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="./index.html">HOME</a>
                             </li>
-                                <li >
-                                    <a href="./pages/pedidos.html" class="linkNav"> PEDIDOS</a>
-                                </li>
-                                    <li>
-                                        <a href="./pages/contacto.html" class="linkNav">CONTACTO</a>
-                                    </li>
-                                        <li>
-                                        <a href="./pages/quienessomos.html" class="linkNav">QUIENES SOMOS</a>
-                                        </li>
-                                    <li>
-                                    <a href="./pages/ayuda.html" class="linkNav">AYUDA</a>
-                                    </li>
-                        </ul>
-                    </div>
-                </nav>
-
-    </header>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./pages/quienessomos.html">QUIENES SOMOS </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./pages/pedidos.html">PEDIDOS</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./pages/contacto.html">CONTACTO</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./pages/sabores.html">SABORES</a>
+                            </li>
+                          </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
 
     <!--Carrusel -->
     
@@ -86,9 +91,11 @@
                    <p>La historia de Capo Bonifati nos traslada a un pueblecito del sur de Italia,
                       <span> Bonifati,famoso por su helado artesano, el lugar donde nació nuestra familia,</span>
                        formada por varias generaciones de heladeros.</p> 
-                   <button>
-                   <a href="quisomos.html" >Ver mas -></a>
-                   </button>
+                  <div>
+                    <button>
+                        <a href="./pages/quienessomos.html" >Ver mas -></a>
+                        </button>
+                  </div>
            </div>
                
        <div class="img-main"> 
@@ -97,6 +104,10 @@
                    
 </main>
 
+<!--Separador-->
+<div class="separador-piña">
+    <img src="./imagenes/captura-piña.png" alt="">
+</div>
 <!--etiqueta para secciones section, aside -->
 
 <section class="section-product">
@@ -171,7 +182,7 @@
         </div>
             
        <div class="items-box">
-                    <div class="item-1">
+                    <div class="items-info">
                         <div>
                             <img src="./imagenes/cup.jpg" alt="cucu-imagen">
                         </div>
@@ -181,7 +192,7 @@
                                 para conseguir el equilibrio entre aroma, sabor y textura.</p>
                         </div>
                 </div>
-                    <div class="item-2">
+                    <div class="items-info">
                     <div>
                         <img src="./imagenes/tarrina.jpg" alt="tarrina-img">
                     </div>
@@ -191,7 +202,7 @@
                             ante tus ojos en creaciones únicas listas para ser degustadas en nuestro laboratorio artesanal.</p>
                         </div>
                     </div>
-                        <div class="item-3">
+                        <div class="items-info">
                         <div>
                             <img src="./imagenes/cucu-png.jpg" alt="cucurucho.img">
                         </div>
@@ -201,7 +212,7 @@
                                 Deja que te sorprendamos con los sabores más originales y una presentación que te dejará con la boca abierta.</p>
                         </div>
                         </div>
-                            <div class="item-4">
+                            <div class="items-info">
                             <div>
                                 <img src="./imagenes/24hs.png" alt="24-img">
                             </div>
@@ -211,7 +222,7 @@
                                     ¡Si quieres un smoothie, te lo preparamos en nuestro FIAT en un momento!</p>
                                 </div>
                             </div>
-                                <div class="item-5">
+                                <div class="items-info">
                                 <div>
                                     <img src="./imagenes/fresh.jpg" alt="fresh-img">
                                 </div>
@@ -221,7 +232,7 @@
                                         Por eso, Capo Bonifati es sinónimo de auténtico sabor italiano.</p>
                                     </div>
                                 </div>
-                                    <div class="item-6">
+                                    <div class="items-info">
                                     <div>
                                         <img src="./imagenes/milkshake.jpg" alt="milkshake-img">
                                     </div>

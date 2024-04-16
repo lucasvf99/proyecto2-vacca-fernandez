@@ -1,0 +1,50 @@
+//import 
+@import "../variables/variables";
+
+@mixin medidas ($widht, $height, $margin ){
+    width: $widht;
+    height: $height;
+    margin: $margin;
+}
+
+@mixin font-h3 {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+      margin: 20px 10px;
+      width: 120%;
+      background-color: $color-nav;
+      color: $color-principal;
+      font-size: 1.5 rem ;
+      text-align: center;
+}
+
+//seccion sabores 
+
+@mixin medidas-mobile {
+    width:60% ;
+    margin: 70px 20px  ;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    border: 1px solid $color-nav;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: $color-nav;
+}
+
+@mixin font {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 30px 10px;
+    font-size: 20px;
+    color: $color-principal;
+
+}
+

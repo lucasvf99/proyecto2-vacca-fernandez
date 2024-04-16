@@ -1,6 +1,18 @@
 //IMPORT
 /*variables */
 @import "./variables/variables";
+/* CSS QUIENES SOMOS  */
+@import "../scss/paginas/quienesomos";
+    
+//PEDIDOS
+@import "./paginas/pedidos";
+
+//Contacto
+@import "./paginas/contacto";
+
+//AYUDA
+@import "./paginas/sabores";
+
 
 //estilos generales 
 *{
@@ -17,31 +29,38 @@ header{
     background-color: $color-nav;
     color: $color-principal;
     padding: 10px 30px;
-        nav{
-            display: flex;
-            font-size: 12px;
-            justify-content: center;
-            justify-content: space-between;
-            align-items: center;
-                .nav-img{
-                    width: 100%;
-                        img{
-                            width: 40%;
-                        }
+                .navbar-collapse{
+                    width: 60% !important;
                 }
-                    ul{
-                        list-style: none;
-                        display: flex;
-                        gap: 10px;
-                            li{
-                                a{
-                                    width: 100%;
-                                    color: $color-principal;
-                                    text-decoration: none;
-                                }
+                .navbar-nav{
+                    width: 50% !important;
+                    color: $color-principal !important ;
+                    --bs-nav-link-color: none !important;
+                }
+                .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+                    color: $color-principal !important; 
+                }
+                .container-fluid{
+                    display: flex ;
+                    justify-content: space-between !important;
+                }
+                .navbar-toggler{
+                    background-color: white !important;
+                }
+                
+                nav{
+                        
+                            .logo-boton {
+                                display: flex;
+                                width: 80%;
+                                align-items: center;
+                                justify-content: space-between;
+                                margin: auto;
                             }
-                    }
-        }
+                            ul.navbar-nav {
+                                width: 100% !important;
+                            }
+                }
 }
 
 /*Carrusel */
@@ -84,11 +103,18 @@ header{
             margin-bottom: 0px;
             padding-bottom: 0px;
         }
-        button {
-            border-radius: 50px;
-            background-color: $color-nav;
-            width: 100px;
-            padding: 5px;
+        div{
+            width: 100%;
+            margin: auto;
+                button {
+                    background-color: none;
+                    width: 300px;
+                    padding: 5px;
+                        a{
+                            color: $color-nav;
+                            text-decoration: none;
+                        }
+                }
         }
         }
     .img-main{
@@ -99,6 +125,14 @@ header{
     }
 }
 
+//separador
+.separador-piña{
+    width: 100%;
+    margin: 30px 0px;
+        img{
+            width: 100%;
+        }
+}
 
 /*Productos seccion */
 .section-product{
@@ -129,6 +163,9 @@ header{
             width: 90%;
             gap: 30px;
             padding: 30px 10px;
+                .conteiner-text{
+
+                }
         }
         .imagenes-local{
         display: flex;
@@ -170,11 +207,17 @@ header{
             justify-content: center;
             align-items: center;
             row-gap: 2rem;
-                .item-1 , .item-2 , .item-3 , .item-4 , .item-5 , .item-6{
+                    .items-info{
                         width: 70%;
+                            h3{
+                                margin: 30px 0px;
+                            }
+                            p{
+                                font-size: 1rem;
+                            }
                         div{
                             img{
-                                width: 40%;
+                                width: 45%;
                             }
                         }
                     }
@@ -202,22 +245,27 @@ footer{
             flex-direction: column;
             flex-wrap: wrap;
             align-items: center;
-            text-align: center;
+            text-align: start;
             row-gap: 30px;
             padding: 10px 10px;
             column-gap: 30px;
             row-gap: 30px;
             font-size: 18px;
-            color: black;
+            color: $color-principal;
                 div{
                     h4{
-                        font-size: 23px;
+                        font-size: 25px;
                         margin-bottom: 10px;
+                        text-align: center;
+                        margin-bottom: 20px;
                     }
                     ul{
+                        
                         li{
                             list-style: none;
                             margin-bottom: 5px;
+                            text-align: center;
+                            font-size: 1rem;
                         }
                     }
                 }
@@ -227,7 +275,7 @@ footer{
                         li{
                             a{
                                 text-decoration: none;
-                                color: black;
+                                color: $color-principal;
                             }
                         }
                     }
@@ -289,6 +337,12 @@ footer{
             height: 70%;
                 .conteiner-text{
                     height: 100%;
+                        h3{
+                            color: #f6be6a;
+                        }
+                        h2, p{
+                            color: $color-principal ;
+                        }
                 }
         }
         .sello-capo{
@@ -345,16 +399,21 @@ footer{
     }
     /*Main*/
     #box-start{
-        border:3px ridge #2B2B2B ;
-        margin: 100px 0px 100px 100px;
-        padding-top: 100px;
-    }
-    .img-main{
-        width: 40%;
-            img{
-                width: 100%;
+        width: 90%;
+        justify-content: center;
+        margin: 70px !important;
+        padding: 100px;
+            .textos-main{
+                width: 40%;
+            }
+            .img-main{
+                width: 64%;
+                    img{
+                        width: 100%;
+                    }
             }
     }
+   
     /*productos seccion*/
     .box-product{
         gap: 70px;
@@ -379,7 +438,7 @@ footer{
                 font-size: 50px;
             }
             h3{
-                width: 30px;
+                width: 100%;
             }
         }
     }
@@ -393,6 +452,7 @@ footer{
    }
    /*Footer*/
    .cont-footer{
+    flex-direction: row !important;
     width: 100%;
     justify-content: center;
     justify-content: space-evenly;
@@ -404,11 +464,3 @@ footer{
    }
 }
 
-/* CSS QUIENES SOMOS  */
-@import "../scss/paginas/quienesomos";
-    
-//PEDIDOS
-@import "./paginas/pedidos";
-
-//Contacto
-@import "./paginas/contacto";

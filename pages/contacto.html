@@ -6,66 +6,96 @@
     <title>Contacto</title>
      <!--css-->
      <link rel="stylesheet" href="../css/estilos.css">
+      <!--boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Namdhinggo:wght@400;500;600;700;800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Slackside+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
-                    
-     <div class="nav-img">
-        <img src="../imagenes/LOGO.svg" alt="logo coder">
-     </div>
-
-
-            <div class="ul-nav">
-                <ul>
-                    <li>
-                        <a href="../index.html" class="linkNav">HOME</a>
-                    </li>
-                        <li >
-                            <a href="./pedidos.html" class="linkNav"> PEDIDOS</a>
-                        </li>
-                            <li>
-                                <a href="./contacto.html" class="linkNav">CONTACTO</a>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                  <div class="logo-boton">
+                      <div>
+                        <a class="navbar-brand" href="../index.html"><img src="../imagenes/LOGO.svg" ></a>
+                      </div>
+                          <div> 
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+                          </div>
+                  </div>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                          <ul class="navbar-nav">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="../index.html">HOME</a>
                             </li>
-                                <li>
-                                <a href="./quienessomos.html" class="linkNav">QUIENES SOMOS</a>
-                                </li>
-                            <li>
-                            <a href="./ayuda.html" class="linkNav">AYUDA</a>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./quienessomos.html">QUIENES SOMOS </a>
                             </li>
-                </ul>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./pedidos.html">PEDIDOS</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./contacto.html">CONTACTO</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./sabores.html">SABORES</a>
+                            </li>
+                          </ul>
+              </div>
             </div>
-        </nav>
+          </nav>
+        </header>
 
-</header>
 
 <!--Contacto-->
+
     <main class="contacto-seccion">
-        <div>
-            <h2>Contacta con Nosotros</h2>
-            <p> Av. Plutarco 61 29010 Málaga</p>
-            <p> 952 91 72 91</p>
-            <p> info@capobonifati.co</p>
+        <div class="info-contacto">
+              <h3>CONTACTA CON NOSOTROS</h3>
+              <ul>
+                <li><a href="">AV. PLUTARCO 61 29010 MALAGA</a></li>
+                <li>  952 91 72 91</li>
+                <li>INFO@CAPOBONIFATI.COM</li>
+              </ul>
         </div>
-        <div>
+        <div class="img-contacto">
             <img src="../../imagenes/contacto/capo-bonifati-contacto.jpg" alt="">
         </div>
     </main>
 
+    <!--Separador -->
+    <div class="separador-auto">
+      <img src="../imagenes/Captura de pantalla (7).png" alt="">
+    </div>
+
     <!--Formulario-->
     <section class="formulario-seccion">
-        <div>
-            <form action=""></form>
-        </div>
-        <div>
+                <div class="formulario-campos">
+                  <h4>RELLENA EL FORMULARIO</h4>
+                  <input class="inputs-formulario" type="text" name="nombre" placeholder="Ingrese su Nombre ">
+                  <input class="inputs-formulario" type="text" name="Apellido" placeholder="Ingrese su Apellido">
+                  <input class="inputs-formulario" type="email" name="Correo" placeholder="Ingrese su Correo ">
+                  <input class="inputs-formulario" type="number" name="Numero" placeholder="Ingrese su Numero ">
+                  <input class="inputs-formulario msj-input" type="text" name="text" placeholder="Ingrese su Mensaje  ">
+                  <p>Estoy de acuerdo con <a href="">Terminos y Condiciones</a></p>
+                  <button type="submit">Enviar</button>
+                </div>
+  
+        <div class="map-formulario">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2740.16551174332!2d-4.479686022102132!3d36.72155128454938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f7da56446a35%3A0xedc501271c6e90bf!2sCapo%20Bonifati%20Gelato!5e0!3m2!1ses!2ses!4v1712310972754!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-    </section>
+
+   </section>
+
 
     <!--FOOTER-->
     <footer>
         <div class="separator-footer">
-          <img src="./imagenes/separador-footer.svg" alt="separator-footer">
+          <img src="../imagenes/separador-footer.svg" alt="separator-footer">
         </div>
               <div class="cont-footer">
                   <div class="foot-info">
@@ -104,5 +134,8 @@
                                </div>
               </div>
     </footer>
+    <!--JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>
