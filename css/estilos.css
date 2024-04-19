@@ -2,9 +2,13 @@
 /*variables */
 /*color principal body */
 /*color del nav */
+/*color fonto crema index*/
+/*color pedidos precio y fondo*/
 /* CSS QUIENES SOMOS  */
 /*color principal body */
 /*color del nav */
+/*color fonto crema index*/
+/*color pedidos precio y fondo*/
 .box-img {
   background-image: url(../imagenes/bonifati-pueblo.jpeg);
   background-position: top center;
@@ -280,6 +284,12 @@
 }
 /*color principal body */
 /*color del nav */
+/*color fonto crema index*/
+/*color pedidos precio y fondo*/
+/*color principal body */
+/*color del nav */
+/*color fonto crema index*/
+/*color pedidos precio y fondo*/
 h2, p, h3 {
   color: #2B2B2B;
 }
@@ -299,15 +309,21 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
 }
 .caja-titulo div h3 {
   font-size: 30px;
   margin-top: 70px;
   margin-bottom: 0px;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 .caja-titulo div h2 {
   font-size: 40px;
-  margin-top: 15px;
+  margin-top: 0px;
+  text-shadow: none;
 }
 
 .separador-auto {
@@ -337,41 +353,20 @@ h2 {
   margin: 0px 0px;
   text-align: center;
   width: 100%;
-  font-size: 20px;
-  color: #fdfd96;
-  /*
-   .tarrinas-img:hover{
-       will-change: transform;
-       transform: scale(1.1) translateY(6%);
-
-   }*/
 }
 .main-pedidos .cajas-pedidos .tarrinas-img {
-  background-image: url(../../imagenes/pedidos/Tarrinas\ \(1\).jpg);
-  object-fit: cover;
   width: 100%;
-  height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: 50%;
-  position: relative;
-  filter: brightness(0.8);
-}
-.main-pedidos .cajas-pedidos .tarrinas-img h4 {
-  filter: brightness(2) !important;
 }
 .main-pedidos .cajas-pedidos .copas-img {
-  background-image: url(../../imagenes/pedidos/Copa-al-gusto.jpg);
-  object-fit: cover;
+  width: 100%;
+}
+.main-pedidos .cajas-pedidos img {
   width: 100%;
   height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: 50%;
+  margin-bottom: 30px;
+}
+.main-pedidos .cajas-pedidos h4 {
+  font-size: 30px;
 }
 
 /*BATIDOS Y SMOOTIES */
@@ -410,7 +405,7 @@ h2 {
   color: #2B2B2B;
 }
 .contenedor-batidos .batidos-smooties .batido-item div .estilo-precio {
-  color: lightgreen;
+  color: #7fba9f;
   font-size: 20px;
 }
 
@@ -425,12 +420,15 @@ h2 {
   width: 100%;
 }
 .tartas-postres .postre-item div h3 {
-  font-size: 20px;
-  margin: 10px 0px;
+  font-size: 30px;
+  margin: 30px 0px;
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .tartas-postres .postre-item div p {
   margin: 10px 0px;
-  color: lightgreen;
+  color: #7fba9f;
   font-size: 20px;
 }
 .tartas-postres .postre-item div img {
@@ -496,12 +494,28 @@ footer .cont-footer .foot-info ul li a {
   }
 }
 @media screen and (min-width: 1024px) {
+  .caja-titulo h3 {
+    font-size: 40px !important;
+  }
+  .caja-titulo h2 {
+    font-size: 50px !important;
+  }
   .main-pedidos h2 {
     font-size: 50px;
     color: #2B2B2B;
   }
+  .main-pedidos .cajas-pedidos .tarrinas-img img {
+    height: 60vh;
+    object-fit: cover;
+  }
+  .main-pedidos .cajas-pedidos .copas-img img {
+    object-fit: cover;
+  }
+  .separador-auto {
+    display: block !important;
+  }
   .contenedor-batidos {
-    margin: 200px !important;
+    margin: 100px !important;
   }
   .contenedor-batidos div h2 {
     font-size: 50px;
@@ -515,11 +529,18 @@ footer .cont-footer .foot-info ul li a {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
   }
+  .tartas-postres .postre-item a img:hover {
+    box-shadow: 0px 0px 0px 10px #f6be6a;
+  }
 }
 /*color principal body */
 /*color del nav */
+/*color fonto crema index*/
+/*color pedidos precio y fondo*/
 /*color principal body */
 /*color del nav */
+/*color fonto crema index*/
+/*color pedidos precio y fondo*/
 /*CONTACTO*/
 .contacto-seccion {
   display: flex;
@@ -529,6 +550,7 @@ footer .cont-footer .foot-info ul li a {
   gap: 50px;
   width: 100%;
   margin: auto;
+  margin-bottom: 100px;
   padding: 50px;
 }
 .contacto-seccion .info-contacto {
@@ -675,6 +697,8 @@ footer .cont-footer .foot-info ul li a {
 }
 /*color principal body */
 /*color del nav */
+/*color fonto crema index*/
+/*color pedidos precio y fondo*/
 .titulo-sabores {
   width: 80%;
   margin: auto;
@@ -849,13 +873,17 @@ header nav ul.navbar-nav {
   margin: auto;
 }
 #box-start .textos-main div button {
-  background-color: none;
-  width: 300px;
+  background-color: #f6be6a;
   padding: 5px;
+  width: 35%;
+  margin-top: 25px;
 }
 #box-start .textos-main div button a {
   color: #2B2B2B;
   text-decoration: none;
+}
+#box-start .textos-main div button a:hover {
+  text-decoration: underline;
 }
 #box-start .img-main {
   width: 100%;
@@ -901,6 +929,31 @@ header nav ul.navbar-nav {
   gap: 30px;
   padding: 30px 10px;
 }
+.fondo-madera .box-carta .conteiner-text h3 {
+  color: #f6be6a;
+}
+.fondo-madera .box-carta .conteiner-text h2 {
+  color: white !important;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.fondo-madera .box-carta .conteiner-text p {
+  color: white;
+}
+.fondo-madera .box-carta .conteiner-text button {
+  background-color: #2B2B2B;
+  padding: 5px;
+  width: 35%;
+  margin-top: 25px;
+}
+.fondo-madera .box-carta .conteiner-text button a {
+  color: white;
+  text-decoration: none;
+  color: white;
+}
+.fondo-madera .box-carta .conteiner-text button a:hover {
+  text-decoration: underline;
+}
 .fondo-madera .imagenes-local {
   display: flex;
   flex-direction: column-reverse;
@@ -924,6 +977,7 @@ header nav ul.navbar-nav {
   font-size: 20px;
   gap: 50px;
   padding: 20px 0px;
+  background-color: #f6be6a;
 }
 .conteiner-grid #contenido-info {
   display: flex;
@@ -931,6 +985,14 @@ header nav ul.navbar-nav {
   align-items: center;
   margin: 30px;
   padding: 0px 5px;
+}
+.conteiner-grid #contenido-info h3 {
+  margin-bottom: 0px;
+  text-align: start;
+}
+.conteiner-grid #contenido-info h2 {
+  margin-top: 0px;
+  font-size: 40px;
 }
 .conteiner-grid .items-box {
   display: flex;
@@ -941,6 +1003,7 @@ header nav ul.navbar-nav {
 }
 .conteiner-grid .items-box .items-info {
   width: 70%;
+  margin: 30px 0px;
 }
 .conteiner-grid .items-box .items-info h3 {
   margin: 30px 0px;
@@ -960,6 +1023,7 @@ header nav ul.navbar-nav {
 footer {
   background-color: #2B2B2B;
   width: 100%;
+  line-height: 30px;
 }
 footer .separator-footer {
   width: 100%;
@@ -981,17 +1045,20 @@ footer .cont-footer {
   font-size: 18px;
   color: white;
 }
-footer .cont-footer div h4 {
-  font-size: 25px;
+footer .cont-footer .foot-info {
+  margin-top: 60px;
+}
+footer .cont-footer .foot-info h4 {
+  font-size: 23px;
   margin-bottom: 10px;
   text-align: center;
   margin-bottom: 20px;
 }
-footer .cont-footer div ul li {
+footer .cont-footer .foot-info ul li {
   list-style: none;
   margin-bottom: 5px;
-  text-align: center;
-  font-size: 1rem;
+  text-align: start;
+  font-size: 15px;
 }
 footer .cont-footer .foot-info ul li a {
   text-decoration: none;
@@ -1055,9 +1122,6 @@ footer .cont-footer .foot-info ul li a {
     align-items: flex-start;
   }
   .conteiner-grid .items-box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     justify-content: center;
     margin-left: 10%;
   }
@@ -1086,10 +1150,11 @@ footer .cont-footer .foot-info ul li a {
   }
   /*Main*/
   #box-start {
-    width: 90%;
+    width: 100%;
     justify-content: center;
-    margin: 70px !important;
     padding: 100px;
+    margin: 0px !important;
+    background-color: #f6be6a;
   }
   #box-start .textos-main {
     width: 40%;
@@ -1114,14 +1179,17 @@ footer .cont-footer .foot-info ul li a {
     font-size: 50px;
   }
   /*Fondo madera */
-  .box-carta {
-    padding: 200px 0px 0px 40px;
+  .fondo-madera {
+    padding: 20px 70px;
+  }
+  .fondo-madera .box-carta {
+    padding: 70px 0px 0px 40px;
     font-size: 20px;
   }
-  .box-carta div h2 {
+  .fondo-madera .box-carta div h2 {
     font-size: 50px;
   }
-  .box-carta div h3 {
+  .fondo-madera .box-carta div h3 {
     width: 100%;
   }
   .imagenes-local {
@@ -1130,6 +1198,20 @@ footer .cont-footer .foot-info ul li a {
   }
   .sello-capo {
     margin: -200px 0px 0px -500px;
+  }
+  #contenido-info {
+    width: 90%;
+  }
+  #contenido-info .img-experiencia {
+    width: 15%;
+  }
+  #contenido-info .img-experiencia img {
+    width: 70%;
+  }
+  .items-box {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
   /*Footer*/
   .cont-footer {

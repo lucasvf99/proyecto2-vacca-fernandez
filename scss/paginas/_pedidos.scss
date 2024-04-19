@@ -1,5 +1,7 @@
 //import 
 @import "../variables/variables";
+//mixin 
+@import "../variables/mixin";
 
 //estilos generales 
 h2, p, h3 {
@@ -16,21 +18,24 @@ h2{
 //estilos 
 
 .caja-titulo {
-    background-color: #7fba9f;
+    background-color: $color-precio;
     height: 300px;
        div {
         display: flex;
         flex-direction: column;
         align-items: center;
+        color: $color-principal;
         
                 h3{
                     font-size: 30px;
                     margin-top: 70px;
                     margin-bottom: 0px;
+                    @include h3-caja-titulo;
                 }
                 h2{
                     font-size: 40px;
-                    margin-top: 15px;
+                    margin-top: 0px;
+                    text-shadow: none;
                 }
             }
 }
@@ -41,6 +46,7 @@ h2{
     img{
         width: 100%;
     }
+
 }
 .main-pedidos{
     display: flex;
@@ -60,41 +66,21 @@ h2{
         margin: 0px 0px;
         text-align: center;
         width: 100%;
-        font-size: 20px;
-        color: #fdfd96;
             .tarrinas-img{
-                background-image: url(../../imagenes/pedidos/tarrinas.jpg);
-                object-fit: cover;
+                    width: 100%;
+            }
+     
+            .copas-img{
+                width: 100%;
+            }
+            img{
                 width: 100%;
                 height: 60vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-size: cover;
-                background-position: 50%;
-                position: relative;
-                filter: brightness(0.8);
-                    h4{
-                        filter: brightness(2) !important;
-                    }
+                margin-bottom: 30px;
             }
-       /*
-        .tarrinas-img:hover{
-            will-change: transform;
-            transform: scale(1.1) translateY(6%);
-    
-        }*/
-        .copas-img{
-            background-image: url(../../imagenes/pedidos/Copa-al-gusto.jpg);
-            object-fit: cover;
-            width: 100%;
-            height: 60vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-size: cover;
-            background-position: 50%;
-        }
+            h4{
+                font-size: 30px;
+            }
     }
 }
 
@@ -139,7 +125,7 @@ h2{
                     color: $color-nav;
                 }
                 .estilo-precio{
-                    color: lightgreen;
+                    color: $color-precio;
                     font-size: 20px;
                 }
             }
@@ -158,12 +144,15 @@ h2{
             width: 100%;
             div{
                 h3{
-                    font-size: 20px;
-                    margin: 10px 0px;
+                    font-size: 30px;
+                    margin:30px 0px;
+                    font-family: "Lobster", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
                 }
                 p{
                     margin: 10px 0px;
-                    color: lightgreen;
+                    color: $color-precio;
                     font-size: 20px;
                 }
                 img{
@@ -259,16 +248,42 @@ footer{
 }
 
 @media screen and (min-width: 1024px){
+    //caja titulo
+    .caja-titulo{
+        h3{
+            font-size: 40px !important;
+        }
+        h2{
+            font-size: 50px !important;
+        }
+    }
    //pedidos 
  .main-pedidos{
     h2{
         font-size: 50px;
         color: $color-nav;
     }
+    .cajas-pedidos{
+        .tarrinas-img{
+            img{
+                height: 60vh;
+                object-fit: cover;
+            }
+        }
+        .copas-img{
+                img{
+                    object-fit: cover;
+                }
+        }
+    }
+ }
+ //separador 
+ .separador-auto{
+    display: block !important;
  }
  //batidos
 .contenedor-batidos{
-    margin: 200px !important;
+    margin: 100px !important;
 
         div{
             h2{
@@ -286,6 +301,13 @@ footer{
 .tartas-postres{
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(5,1fr);
+        .postre-item{
+                a {
+                    img:hover{
+                        box-shadow: 0px 0px 0px 10px $color-fondo-index;
+                    }
+                }
+        }
 }
 
 }

@@ -48,3 +48,21 @@
 
 }
 
+@mixin enlace {
+    text-decoration: none;
+    color: $color-principal;
+    
+}
+
+@mixin botones {
+    padding: 5px ;
+    width: 35%;
+    margin-top: 25px;
+}
+
+@mixin h3-caja-titulo{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
