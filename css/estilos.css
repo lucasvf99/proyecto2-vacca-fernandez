@@ -354,11 +354,10 @@ h2 {
   text-align: center;
   width: 100%;
 }
-.main-pedidos .cajas-pedidos .tarrinas-img {
+.main-pedidos .cajas-pedidos .tarrinas-img, .main-pedidos .cajas-pedidos .copas-img {
   width: 100%;
-}
-.main-pedidos .cajas-pedidos .copas-img {
-  width: 100%;
+  object-fit: cover;
+  height: 70vh;
 }
 .main-pedidos .cajas-pedidos img {
   width: 100%;
@@ -475,6 +474,12 @@ footer .cont-footer .foot-info ul li a {
     flex-direction: row !important;
     column-gap: 10px;
     padding: 0px 10px !important;
+  }
+  .cajas-pedidos .tarrinas-img img {
+    object-fit: cover;
+  }
+  .cajas-pedidos .copas-img img {
+    object-fit: cover;
   }
   /*BATIDOS SMOOTIES*/
   .contenedor-batidos {
@@ -904,12 +909,32 @@ header nav ul.navbar-nav {
 .section-product {
   background-color: white;
   padding: 30px 0px;
+  margin: 50px 0px;
 }
 .section-product .titulo-section {
   padding-left: 15px;
+  display: flex;
+  margin-bottom: 100px !important;
+}
+.section-product .titulo-section img {
+  width: 20%;
+  height: 20%;
+}
+.section-product .titulo-section div {
+  width: 80%;
+  padding: 10px;
+}
+.section-product .titulo-section div h3 {
+  font-size: 20px;
+  color: #7fba9f;
+}
+.section-product .titulo-section div h2 {
+  font-size: 30px;
 }
 .section-product .box-product {
-  margin: 10% 22%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
 }
 .section-product .box-product div {
   margin: 15px;
@@ -1033,12 +1058,10 @@ footer .separator-footer img {
   width: 100%;
 }
 footer .cont-footer {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: start;
-  row-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 10px;
   padding: 10px 10px;
   column-gap: 30px;
   row-gap: 30px;
@@ -1046,18 +1069,18 @@ footer .cont-footer {
   color: white;
 }
 footer .cont-footer .foot-info {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 footer .cont-footer .foot-info h4 {
   font-size: 23px;
   margin-bottom: 10px;
   text-align: center;
-  margin-bottom: 20px;
+  margin: auto;
+  margin-bottom: 10px;
 }
 footer .cont-footer .foot-info ul li {
   list-style: none;
-  margin-bottom: 5px;
-  text-align: start;
+  text-align: center;
   font-size: 15px;
 }
 footer .cont-footer .foot-info ul li a {
@@ -1087,6 +1110,18 @@ footer .cont-footer .foot-info ul li a {
     background-color: white;
     padding: 30px 5px;
   }
+  .section-product .titulo-section img {
+    width: 10%;
+  }
+  .section-product .titulo-section h3 {
+    font-size: 25px;
+    margin: 0px !important;
+  }
+  .section-product .titulo-section h2 {
+    font-size: 35px !important;
+    margin: 0px;
+    padding: 0px;
+  }
   .section-product .box-product {
     display: flex;
     width: 90%;
@@ -1101,7 +1136,7 @@ footer .cont-footer .foot-info ul li a {
     display: flex;
   }
   .fondo-madera .box-carta {
-    width: 70%;
+    width: 50%;
     height: 70%;
   }
   .fondo-madera .box-carta .conteiner-text {
@@ -1109,9 +1144,17 @@ footer .cont-footer .foot-info ul li a {
   }
   .fondo-madera .box-carta .conteiner-text h3 {
     color: #f6be6a;
+    font-size: 20px;
   }
-  .fondo-madera .box-carta .conteiner-text h2, .fondo-madera .box-carta .conteiner-text p {
+  .fondo-madera .box-carta .conteiner-text h2 {
     color: white;
+    font-size: 25px;
+  }
+  .fondo-madera .box-carta .conteiner-text p {
+    color: white;
+  }
+  .fondo-madera .imagenes-local {
+    width: 50%;
   }
   .fondo-madera .sello-capo {
     margin-left: -70%;
@@ -1178,6 +1221,12 @@ footer .cont-footer .foot-info ul li a {
   .titulo-section div h2 {
     font-size: 50px;
   }
+  .section-product .titulo-section {
+    margin: 20px 0px 10px 100px !important;
+  }
+  .section-product .titulo-section img {
+    width: 8%;
+  }
   /*Fondo madera */
   .fondo-madera {
     padding: 20px 70px;
@@ -1185,6 +1234,15 @@ footer .cont-footer .foot-info ul li a {
   .fondo-madera .box-carta {
     padding: 70px 0px 0px 40px;
     font-size: 20px;
+  }
+  .fondo-madera .box-carta .conteiner-text h3 {
+    font-size: 25px;
+  }
+  .fondo-madera .box-carta .conteiner-text h2 {
+    font-size: 30px;
+  }
+  .fondo-madera .box-carta .conteiner-text h2 span {
+    display: block;
   }
   .fondo-madera .box-carta div h2 {
     font-size: 50px;
@@ -1214,8 +1272,12 @@ footer .cont-footer .foot-info ul li a {
     grid-template-rows: repeat(2, 1fr);
   }
   /*Footer*/
+  footer {
+    height: auto !important;
+  }
   .cont-footer {
-    flex-direction: row !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-template-rows: auto !important;
     width: 100%;
     justify-content: center;
     justify-content: space-evenly;

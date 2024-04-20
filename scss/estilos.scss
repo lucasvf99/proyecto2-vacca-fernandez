@@ -140,11 +140,31 @@ header{
 .section-product{
     background-color: white;
     padding: 30px 0px;
+    margin: 50px 0px;
         .titulo-section{
             padding-left: 15px;
+            display: flex;
+            margin-bottom: 100px !important;
+                img{
+                    width: 20%;
+                    height: 20%;
+                }
+                div{
+                    width: 80%;
+                    padding: 10px;
+                    h3{
+                        font-size: 20px;
+                        color: $color-precio;
+                    }
+                        h2{
+                            font-size: 30px;
+                        }
+                }
         }
         .box-product{
-            margin: 10% 22%;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
                 div{
                     margin: 15px;
                     text-align: center;
@@ -275,31 +295,29 @@ footer{
                 }
         }
         .cont-footer{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-items: center;
-            text-align: start;
-            row-gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(4,1fr);
+            row-gap: 10px;
             padding: 10px 10px;
             column-gap: 30px;
             row-gap: 30px;
             font-size: 18px;
             color: $color-principal;
                 .foot-info{
-                    margin-top: 60px;
+                    margin-top: 30px;
                     h4{
                         font-size: 23px;
                         margin-bottom: 10px;
                         text-align: center;
-                        margin-bottom: 20px;
+                        margin: auto;
+                        margin-bottom: 10px;
                     }
                     ul{
                         
                         li{
                             list-style: none;
-                            margin-bottom: 5px;
-                            text-align: start;
+                            text-align: center;
                             font-size: 15px;
                         }
                     }
@@ -349,6 +367,20 @@ footer{
   .section-product{
     background-color: white;
     padding: 30px 5px;
+        .titulo-section{
+            img{
+                width: 10%;
+            }
+            h3{
+                font-size: 25px ;
+                margin: 0px !important;
+            }
+            h2{
+                font-size: 35px !important;
+                margin: 0px;
+                padding: 0px;
+            }
+        }
         .box-product{
             display: flex;
             width: 90%;
@@ -368,17 +400,25 @@ footer{
   .fondo-madera{
     display: flex;
         .box-carta{
-            width: 70%;
+            width: 50%;
             height: 70%;
                 .conteiner-text{
                     height: 100%;
                         h3{
                             color: $color-fondo-index;
+                            font-size: 20px;
                         }
-                        h2, p{
+                        h2{
                             color: $color-principal ;
+                            font-size: 25px;
+                        }
+                        p{
+                            color: $color-principal;
                         }
                 }
+        }
+        .imagenes-local{
+            width: 50%;
         }
         .sello-capo{
             margin-left: -70%;
@@ -403,6 +443,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+       
         div{
             ul{
                 a{
@@ -463,12 +504,34 @@ footer{
                 }
             }
     }
+
+//seccion nuestros productos 
+
+.section-product{
+    .titulo-section{
+        margin: 20px 0px 10px 100px !important;
+        img{
+            width: 8%;
+        }
+    }
+}
     /*Fondo madera */
     .fondo-madera{
         padding: 20px 70px;
         .box-carta{
             padding: 70px 0px 0px 40px;
             font-size: 20px;
+                .conteiner-text{
+                    h3{
+                        font-size: 25px;
+                    }
+                    h2{
+                        font-size: 30px;
+                            span{
+                                display: block;
+                            }
+                    }
+                }
             div{
                 h2{
                     font-size: 50px;
@@ -504,16 +567,21 @@ footer{
         grid-template-rows: repeat(2,1fr);
    }
    /*Footer*/
+   footer{
+    height: auto !important;
+   }
    .cont-footer{
-    flex-direction: row !important;
+    grid-template-columns: repeat(4,1fr) !important;
+    grid-template-rows: auto !important;
     width: 100%;
     justify-content: center;
     justify-content: space-evenly;
     flex-direction: row;
+    h4 {
+        font-size: 20px;
+        padding-bottom: 10px;
+       }
    }
-   .cont-footer h4 {
-    font-size: 20px;
-    padding-bottom: 10px;
-   }
+  
 }
 
