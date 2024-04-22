@@ -29,7 +29,7 @@
 
             /*Main viaje a italia */
 
-.box-stacion{
+.box-estacion{
     width: 100% !important;
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@
     margin-top: 0px;
     margin-bottom: 0px;
     padding-bottom: 50px;
-        .img-train{
+        .img-tren{
         width: 130%;
         margin: 30px 100px 20px -300px;
             img{
@@ -187,18 +187,18 @@
 
     /*VIAJE A ITALIA */
 
-    .box-stacion{
+    .box-estacion{
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         padding: 50px 10px;
-            .box-train{
+            .box-tren{
             display: flex;
             flex-direction: column;
             width: 60%;
             align-items: center;
-                .img-train {
+                .img-tren {
                 width: 100%;
                 margin: 10px 400px 0px 0px;
                     img{

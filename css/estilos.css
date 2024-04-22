@@ -34,7 +34,7 @@
 }
 
 /*Main viaje a italia */
-.box-stacion {
+.box-estacion {
   width: 100% !important;
   display: flex;
   flex-direction: column;
@@ -46,22 +46,22 @@
   margin-bottom: 0px;
   padding-bottom: 50px;
 }
-.box-stacion .img-train {
+.box-estacion .img-tren {
   width: 130%;
   margin: 30px 100px 20px -300px;
 }
-.box-stacion .img-train img {
+.box-estacion .img-tren img {
   width: 100%;
 }
-.box-stacion .box-text-train {
+.box-estacion .box-text-train {
   padding: 10px 10px;
   font-size: 20px;
 }
-.box-stacion .box-text-train h3 {
+.box-estacion .box-text-train h3 {
   font-size: 40px;
   margin-bottom: 20px;
 }
-.box-stacion .box-text-train P {
+.box-estacion .box-text-train P {
   color: white;
 }
 
@@ -173,36 +173,36 @@
     margin-left: 30px;
   }
   /*VIAJE A ITALIA */
-  .box-stacion {
+  .box-estacion {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 50px 10px;
   }
-  .box-stacion .box-train {
+  .box-estacion .box-tren {
     display: flex;
     flex-direction: column;
     width: 60%;
     align-items: center;
   }
-  .box-stacion .box-train .img-train {
+  .box-estacion .box-tren .img-tren {
     width: 100%;
     margin: 10px 400px 0px 0px;
   }
-  .box-stacion .box-train .img-train img {
+  .box-estacion .box-tren .img-tren img {
     width: 100%;
   }
-  .box-stacion .box-train .box-text-train {
+  .box-estacion .box-tren .box-text-train {
     width: 50%;
   }
-  .box-stacion .box-train .box-text-train p {
+  .box-estacion .box-tren .box-text-train p {
     margin-bottom: 30px;
   }
-  .box-stacion .box-train .box-text-train h3 {
+  .box-estacion .box-tren .box-text-train h3 {
     font-size: 55px;
   }
-  .box-stacion .img-estacion {
+  .box-estacion .img-estacion {
     width: 40%;
   }
   /*Abierto todo el año */
@@ -718,6 +718,9 @@ footer .cont-footer .foot-info ul li a {
   margin-bottom: 100px;
   text-shadow: 15px 20px 10px #2B2B2B;
 }
+.titulo-sabores .animate__pulse:hover {
+  animation-duration: 2s;
+}
 
 .sabores-grid {
   display: grid;
@@ -735,6 +738,8 @@ footer .cont-footer .foot-info ul li a {
   padding: 20px;
   border-radius: 50px;
   background-color: #2B2B2B;
+  animation: fadeIn;
+  animation-duration: 3s;
 }
 .sabores-grid .sabores-helado h3 {
   font-family: "Lobster", sans-serif;
@@ -906,37 +911,37 @@ header nav ul.navbar-nav {
 }
 
 /*Productos seccion */
-.section-product {
+.seccion-producto {
   background-color: white;
   padding: 30px 0px;
   margin: 50px 0px;
 }
-.section-product .titulo-section {
+.seccion-producto .titulo-section {
   padding-left: 15px;
   display: flex;
   margin-bottom: 100px !important;
 }
-.section-product .titulo-section img {
+.seccion-producto .titulo-section img {
   width: 20%;
   height: 20%;
 }
-.section-product .titulo-section div {
+.seccion-producto .titulo-section div {
   width: 80%;
   padding: 10px;
 }
-.section-product .titulo-section div h3 {
+.seccion-producto .titulo-section div h3 {
   font-size: 20px;
   color: #7fba9f;
 }
-.section-product .titulo-section div h2 {
+.seccion-producto .titulo-section div h2 {
   font-size: 30px;
 }
-.section-product .box-product {
+.seccion-producto .box-product {
   margin: auto;
   justify-content: center;
   align-items: center;
 }
-.section-product .box-product div {
+.seccion-producto .box-product div {
   margin: 15px;
   text-align: center;
   font-size: 20px;
@@ -993,7 +998,7 @@ header nav ul.navbar-nav {
 }
 
 /*Experiencia unica */
-.conteiner-grid {
+.contenedor-grid {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1004,39 +1009,39 @@ header nav ul.navbar-nav {
   padding: 20px 0px;
   background-color: #f6be6a;
 }
-.conteiner-grid #contenido-info {
+.contenedor-grid #contenido-info {
   display: flex;
   gap: 15px;
   align-items: center;
   margin: 30px;
   padding: 0px 5px;
 }
-.conteiner-grid #contenido-info h3 {
+.contenedor-grid #contenido-info h3 {
   margin-bottom: 0px;
   text-align: start;
 }
-.conteiner-grid #contenido-info h2 {
+.contenedor-grid #contenido-info h2 {
   margin-top: 0px;
   font-size: 40px;
 }
-.conteiner-grid .items-box {
+.contenedor-grid .items-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   row-gap: 2rem;
 }
-.conteiner-grid .items-box .items-info {
+.contenedor-grid .items-box .items-info {
   width: 70%;
   margin: 30px 0px;
 }
-.conteiner-grid .items-box .items-info h3 {
+.contenedor-grid .items-box .items-info h3 {
   margin: 30px 0px;
 }
-.conteiner-grid .items-box .items-info p {
+.contenedor-grid .items-box .items-info p {
   font-size: 1rem;
 }
-.conteiner-grid .items-box .items-info div img {
+.contenedor-grid .items-box .items-info div img {
   width: 45%;
 }
 
@@ -1083,6 +1088,9 @@ footer .cont-footer .foot-info ul li {
   text-align: center;
   font-size: 15px;
 }
+footer .cont-footer .foot-info ul li a:hover {
+  text-decoration: underline;
+}
 footer .cont-footer .foot-info ul li a {
   text-decoration: none;
   color: white;
@@ -1106,29 +1114,29 @@ footer .cont-footer .foot-info ul li a {
     margin-left: 20px;
   }
   /*seccion producto*/
-  .section-product {
+  .seccion-producto {
     background-color: white;
     padding: 30px 5px;
   }
-  .section-product .titulo-section img {
+  .seccion-producto .titulo-section img {
     width: 10%;
   }
-  .section-product .titulo-section h3 {
+  .seccion-producto .titulo-section h3 {
     font-size: 25px;
     margin: 0px !important;
   }
-  .section-product .titulo-section h2 {
+  .seccion-producto .titulo-section h2 {
     font-size: 35px !important;
     margin: 0px;
     padding: 0px;
   }
-  .section-product .box-product {
+  .seccion-producto .box-product {
     display: flex;
     width: 90%;
     margin-left: 8%;
     justify-content: center;
   }
-  .section-product .box-product div a img {
+  .seccion-producto .box-product div a img {
     width: 100%;
   }
   /*seccion merienda */
@@ -1161,10 +1169,10 @@ footer .cont-footer .foot-info ul li a {
     width: 70%;
   }
   /*experiencia unica*/
-  .conteiner-grid {
+  .contenedor-grid {
     align-items: flex-start;
   }
-  .conteiner-grid .items-box {
+  .contenedor-grid .items-box {
     justify-content: center;
     margin-left: 10%;
   }
@@ -1221,10 +1229,10 @@ footer .cont-footer .foot-info ul li a {
   .titulo-section div h2 {
     font-size: 50px;
   }
-  .section-product .titulo-section {
+  .seccion-producto .titulo-section {
     margin: 20px 0px 10px 100px !important;
   }
-  .section-product .titulo-section img {
+  .seccion-producto .titulo-section img {
     width: 8%;
   }
   /*Fondo madera */

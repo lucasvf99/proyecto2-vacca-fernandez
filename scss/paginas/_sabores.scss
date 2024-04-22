@@ -16,6 +16,10 @@
             margin-bottom: 100px;
             text-shadow: 15px 20px 10px $color-nav  ;
         }
+        .animate__pulse:hover{
+            animation-duration: 2s ;
+            
+        }
 }
 
 .sabores-grid{
@@ -24,17 +28,19 @@
     grid-template-rows: repeat(23,1fr);
             .sabores-helado{
                 @include medidas-mobile;
-                h3{
-                @include font;
-                }
-                div{
-                    width: 80%;
-                    margin: auto;
-                        img{
-                            width: 100%;
-                        }
-                }
-        }
+                animation: fadeIn;
+                animation-duration: 3s;
+                    h3{
+                    @include font;
+                    }
+                    div{
+                        width: 80%;
+                        margin: auto;
+                            img{
+                                width: 100%;
+                            }
+                    }
+            }
         .sabores-helado:hover{
             width: 70%;
             box-shadow: 1px 15px 37px $color-nav;

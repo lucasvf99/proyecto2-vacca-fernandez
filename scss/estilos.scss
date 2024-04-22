@@ -137,7 +137,7 @@ header{
 }
 
 /*Productos seccion */
-.section-product{
+.seccion-producto{
     background-color: white;
     padding: 30px 0px;
     margin: 50px 0px;
@@ -228,7 +228,7 @@ header{
 
         /*Experiencia unica */
 
-.conteiner-grid{
+.contenedor-grid{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -319,6 +319,9 @@ footer{
                             list-style: none;
                             text-align: center;
                             font-size: 15px;
+                                a:hover{
+                                    text-decoration: underline;
+                                }
                         }
                     }
                 }
@@ -364,7 +367,7 @@ footer{
     margin-left: 20px;
   }
   /*seccion producto*/
-  .section-product{
+  .seccion-producto{
     background-color: white;
     padding: 30px 5px;
         .titulo-section{
@@ -427,7 +430,7 @@ footer{
   }
 
   /*experiencia unica*/
-  .conteiner-grid{
+  .contenedor-grid{
     align-items: flex-start;
         .items-box{
             justify-content: center;
@@ -507,7 +510,7 @@ footer{
 
 //seccion nuestros productos 
 
-.section-product{
+.seccion-producto{
     .titulo-section{
         margin: 20px 0px 10px 100px !important;
         img{
