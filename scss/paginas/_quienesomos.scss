@@ -45,7 +45,15 @@
         margin: 30px 100px 20px -300px;
             img{
                 width: 100%;
+                animation: fadeInLeft ;
+                animation-duration: 4s;
             }
+            }
+            .img-estacion{
+                img{
+                    animation: fadeInRight;
+                    animation-duration: 7s;
+                }
         }
         .box-text-train{
             padding: 10px 10px;
@@ -150,6 +158,20 @@
 @media screen and (min-width: 600px){
     .nav-img{
         width: 30%;
+    }
+    .box-estacion{
+        flex-direction: row;
+        .box-tren{
+                .box-text-train{
+                    h3{
+                        font-size: 27px;
+                    }
+                    p{
+                        font-size: 1rem;
+                        text-align: start;
+                    }
+                }
+        }
     }
 }
 @media screen and  (min-width: 1024px){
@@ -322,3 +344,6 @@
     object-fit: cover;
 }
 }
+
+
+//sacar hover, alinear nav, 

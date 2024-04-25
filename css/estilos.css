@@ -4,11 +4,13 @@
 /*color del nav */
 /*color fonto crema index*/
 /*color pedidos precio y fondo*/
+/*color complementario precio */
 /* CSS QUIENES SOMOS  */
 /*color principal body */
 /*color del nav */
 /*color fonto crema index*/
 /*color pedidos precio y fondo*/
+/*color complementario precio */
 .box-img {
   background-image: url(../imagenes/bonifati-pueblo.jpeg);
   background-position: top center;
@@ -52,6 +54,12 @@
 }
 .box-estacion .img-tren img {
   width: 100%;
+  animation: fadeInLeft;
+  animation-duration: 4s;
+}
+.box-estacion .img-estacion img {
+  animation: fadeInRight;
+  animation-duration: 7s;
 }
 .box-estacion .box-text-train {
   padding: 10px 10px;
@@ -147,6 +155,16 @@
 @media screen and (min-width: 600px) {
   .nav-img {
     width: 30%;
+  }
+  .box-estacion {
+    flex-direction: row;
+  }
+  .box-estacion .box-tren .box-text-train h3 {
+    font-size: 27px;
+  }
+  .box-estacion .box-tren .box-text-train p {
+    font-size: 1rem;
+    text-align: start;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -286,10 +304,12 @@
 /*color del nav */
 /*color fonto crema index*/
 /*color pedidos precio y fondo*/
+/*color complementario precio */
 /*color principal body */
 /*color del nav */
 /*color fonto crema index*/
 /*color pedidos precio y fondo*/
+/*color complementario precio */
 h2, p, h3 {
   color: #2B2B2B;
 }
@@ -391,6 +411,7 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
+  object-fit: cover;
 }
 .contenedor-batidos .batidos-smooties .batido-item div {
   margin: 10px 0px;
@@ -537,15 +558,23 @@ footer .cont-footer .foot-info ul li a {
   .tartas-postres .postre-item a img:hover {
     box-shadow: 0px 0px 0px 10px #f6be6a;
   }
+  .tartas-postres .alfajor-item {
+    grid-column: 4/3;
+  }
+  .tartas-postres .crepe-item {
+    grid-column: 2/3;
+  }
 }
 /*color principal body */
 /*color del nav */
 /*color fonto crema index*/
 /*color pedidos precio y fondo*/
+/*color complementario precio */
 /*color principal body */
 /*color del nav */
 /*color fonto crema index*/
 /*color pedidos precio y fondo*/
+/*color complementario precio */
 /*CONTACTO*/
 .contacto-seccion {
   display: flex;
@@ -704,19 +733,23 @@ footer .cont-footer .foot-info ul li a {
 /*color del nav */
 /*color fonto crema index*/
 /*color pedidos precio y fondo*/
+/*color complementario precio */
 .titulo-sabores {
-  width: 80%;
+  width: 100%;
+  height: 200px;
   margin: auto;
-  margin-top: 50px;
+  margin-bottom: 100px;
   text-align: center;
+  background-color: #7fba9f;
 }
 .titulo-sabores h2 {
-  font-size: 60px;
+  font-size: 50px;
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   font-style: normal;
-  margin-bottom: 100px;
-  text-shadow: 15px 20px 10px #2B2B2B;
+  padding: 50px 10px 30px 10px;
+  text-shadow: 2px 5px 10px white;
+  color: white;
 }
 .titulo-sabores .animate__pulse:hover {
   animation-duration: 2s;
@@ -734,10 +767,9 @@ footer .cont-footer .foot-info ul li a {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
-  border: 1px solid #2B2B2B;
   padding: 20px;
   border-radius: 50px;
-  background-color: #2B2B2B;
+  background-color: #fdfd96;
   animation: fadeIn;
   animation-duration: 3s;
 }
@@ -747,8 +779,8 @@ footer .cont-footer .foot-info ul li a {
   font-style: normal;
   text-align: center;
   margin: 30px 10px;
-  font-size: 20px;
-  color: white;
+  font-size: 23px;
+  color: #7fba9f;
 }
 .sabores-grid .sabores-helado div {
   width: 80%;
@@ -756,13 +788,7 @@ footer .cont-footer .foot-info ul li a {
 }
 .sabores-grid .sabores-helado div img {
   width: 100%;
-}
-.sabores-grid .sabores-helado:hover {
-  width: 70%;
-  box-shadow: 1px 15px 37px #2B2B2B;
-}
-.sabores-grid .sabores-helado:hover h2 {
-  font-size: 35px;
+  border-radius: 120px;
 }
 
 @media screen and (min-width: 600px) {
@@ -776,12 +802,6 @@ footer .cont-footer .foot-info ul li a {
   }
   .sabores-grid .sabores-helado h3 {
     width: 100%;
-  }
-  .sabores-grid .sabores-helado:hover {
-    width: 100%;
-  }
-  .sabores-grid .sabores-helado:hover h3 {
-    font-size: 30px;
   }
 }
 @media screen and (min-width: 1040px) {
@@ -836,6 +856,7 @@ header nav .logo-boton {
   align-items: center;
   justify-content: space-between;
   margin: auto;
+  margin-left: 50px;
 }
 header nav ul.navbar-nav {
   width: 100% !important;
@@ -843,7 +864,7 @@ header nav ul.navbar-nav {
 
 /*Carrusel */
 .carousel-item img {
-  height: 70vh;
+  height: 35vh;
   object-fit: cover;
 }
 
@@ -971,10 +992,11 @@ header nav ul.navbar-nav {
   color: white;
 }
 .fondo-madera .box-carta .conteiner-text button {
-  background-color: #2B2B2B;
+  background-color: inherit;
   padding: 5px;
   width: 35%;
   margin-top: 25px;
+  border: none;
 }
 .fondo-madera .box-carta .conteiner-text button a {
   color: white;
@@ -983,6 +1005,9 @@ header nav ul.navbar-nav {
 }
 .fondo-madera .box-carta .conteiner-text button a:hover {
   text-decoration: underline;
+}
+.fondo-madera .box-carta .conteiner-text button:hover {
+  border: 1px solid #f6be6a;
 }
 .fondo-madera .imagenes-local {
   display: flex;
@@ -1022,7 +1047,7 @@ header nav ul.navbar-nav {
 }
 .contenedor-grid #contenido-info h2 {
   margin-top: 0px;
-  font-size: 40px;
+  font-size: 35px;
 }
 .contenedor-grid .items-box {
   display: flex;
@@ -1045,10 +1070,6 @@ header nav ul.navbar-nav {
   width: 45%;
 }
 
-/*
-.item-1 div img , .item-2 div img , .item-3 div img , .item-4 div img , .item-5 div img , .item-6 div img {
-    width: 40%;
-}*/
 /*FOOTER*/
 footer {
   background-color: #2B2B2B;
@@ -1195,9 +1216,17 @@ footer .cont-footer .foot-info ul li a {
   header .nav-img img {
     width: 7%;
   }
+  header .logo-boton {
+    width: 70% !important;
+    margin-left: 10% !important;
+  }
   header nav ul {
     width: 100%;
     font-size: 1rem;
+  }
+  /*Carrusel */
+  .carousel-item img {
+    height: 85vh;
   }
   /*Main*/
   #box-start {

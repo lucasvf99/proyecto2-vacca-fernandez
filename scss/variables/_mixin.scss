@@ -31,10 +31,9 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
-    border: 1px solid $color-nav;
     padding: 20px;
     border-radius: 50px;
-    background-color: $color-nav;
+    background-color: $color-sabores;
 }
 
 @mixin font {
@@ -43,8 +42,8 @@
     font-style: normal;
     text-align: center;
     margin: 30px 10px;
-    font-size: 20px;
-    color: $color-principal;
+    font-size: 23px;
+    color: $color-precio;
 
 }
 
@@ -58,6 +57,7 @@
     padding: 5px ;
     width: 35%;
     margin-top: 25px;
+    
 }
 
 @mixin h3-caja-titulo{

@@ -56,6 +56,7 @@ header{
                                 align-items: center;
                                 justify-content: space-between;
                                 margin: auto;
+                                margin-left: 50px;
                             }
                             ul.navbar-nav {
                                 width: 100% !important;
@@ -65,7 +66,7 @@ header{
 
 /*Carrusel */
 .carousel-item img {
-    height: 70vh;
+    height: 35vh;
     object-fit: cover;
 }
 
@@ -198,7 +199,7 @@ header{
                         color: $color-principal;
                     }
                     button{
-                        background-color: $color-nav;
+                        background-color: inherit; 
                         @include botones;
                             a{
                                 color: $color-principal;
@@ -207,6 +208,10 @@ header{
                             a:hover {
                                 text-decoration: underline;
                             }
+                            border: none;
+                    }
+                    button:hover{
+                        border: 1px solid $color-fondo-index;
                     }
                 }
         }
@@ -250,7 +255,7 @@ header{
                 }
                 h2{
                     margin-top: 0px;
-                    font-size: 40px;
+                    font-size: 35px;
                 }
         }
         .items-box{
@@ -276,10 +281,7 @@ header{
                     }
         }
 }
-/*
-.item-1 div img , .item-2 div img , .item-3 div img , .item-4 div img , .item-5 div img , .item-6 div img {
-    width: 40%;
-}*/
+
 
             /*FOOTER*/
 
@@ -346,6 +348,7 @@ footer{
 
   header{
     nav{
+
         .nav-img{
             img{
                 width: 30%;
@@ -468,12 +471,20 @@ footer{
                      width: 7%;
             }
         }
+        .logo-boton{
+            width: 70% !important;
+            margin-left: 10% !important;
+        }
     } 
     
     header nav ul {
         width: 100%;
         font-size: 1rem;
     }
+    /*Carrusel */
+.carousel-item img {
+    height: 85vh;
+}
     /*Main*/
     #box-start{
         width: 100%;
