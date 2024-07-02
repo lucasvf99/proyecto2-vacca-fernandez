@@ -5,6 +5,7 @@ const botonCarrito = document.getElementById("carrito-compra")
 botonCarrito.addEventListener("click", (e)=>{
         carritoDOM.classList.toggle("carrito-none")
         e.preventDefault()
+
         
 })
 
@@ -78,8 +79,8 @@ function mostrarCarrito (){
         agregadoraDeEventos(botonAgregarProducto, "agregar-producto", "click") 
         agregadoraDeEventos(terminarCarrito, "terminar-compra", "click")
         agregadoraDeEventos(limpiarCarrito, "limpiar-carrito", "click")
-       
-
+        agregadoraDeEventos(mostrarCompra, "terminar-compra", "click")
+        
 
         //numero en carrito
         let cantidadCarrito = carritoArray.reduce((acumulador, i) => {
@@ -94,7 +95,6 @@ function mostrarCarrito (){
 
 // terminar compra 
 function terminarCarrito (){
-    //alert("Compra realizada ")
     localStorage.clear()
     carritoArray = []
     mostrarCarrito()
@@ -141,7 +141,10 @@ function agregarCarrito (e){
    // alert("Producto agregado ")
     localStorage.setItem("carrito", JSON.stringify(carritoArray))
     actualizadora ()
+    //console.log(carritoDOM.children)
 }
+
+//agregar productos 
 
 function botonAgregarProducto (e){
     let titulo =(e.target.parentElement.parentElement.children[1].innerText) //traemos el titulo de la caja padre 
@@ -157,8 +160,10 @@ function botonAgregarProducto (e){
     localStorage.setItem("carrito", JSON.stringify(carritoArray))
 }
 
+//eliminar producto 
+
 function eliminarProducto (e){
-    console.dir(e.target.parentElement.parentElement)
+   // console.dir(e.target.parentElement.parentElement)
     let titulo =(e.target.parentElement.parentElement.children[1].innerText) //traemos el titulo de la caja padre 
     let titulos = carritoArray.map(el => el.titulo) 
     
@@ -189,8 +194,33 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 
 
-//  //console.log(carritoArray)
+//Modal js 
+
+let modalJs = document.getElementById("modal-js")
+let botonModal = document.getElementById("modal-cierre")
+
+function mostrarCompra (){
 
 
+        console.dir(carritoArray)
+        if(carritoArray.lenght == 0){
+           //    console.dir(carritoDOM .children)
+           console.log("no hay nada ")
+        }else{
+           // console.dir(modalJs)
+            modalJs.classList.toggle("mostrar-modal")
+        }
+        
+        carritoDOM.classList.toggle("carrito-none")
 
-// numeroArribaCarrito()
+        
+}
+
+function cerrarModal (){
+    botonModal.addEventListener("click",()=>{
+        modalJs.classList.toggle("mostrar-modal")
+    })
+}
+
+
+cerrarModal()
