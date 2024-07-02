@@ -76,7 +76,6 @@ function mostrarCarrito (){
 
         agregadoraDeEventos(eliminarProducto, "eliminar-producto", "click")
         agregadoraDeEventos(botonAgregarProducto, "agregar-producto", "click") 
-        agregadoraDeEventos(mostrarCompra, "terminar-compra", "click")
         agregadoraDeEventos(terminarCarrito, "terminar-compra", "click")
         agregadoraDeEventos(limpiarCarrito, "limpiar-carrito", "click")
        
@@ -91,47 +90,7 @@ function mostrarCarrito (){
 
 }
 
-//mostrar compra 
 
-let carritoFlotante = document.getElementById("carrito-flotante")
-
-function mostrarCompra  (){
-    
-    let compraFinal = carritoArray.map((el) => {
-        return {
-            titulo : el.titulo,
-            precio: el.precio,
-            img: el.img
-        }
-    }
-      
-    )
-    console.log(compraFinal)
-if((compraFinal) ){
-    compraFinal.forEach(el => {
-        carritoFlotante.innerHTML += `
-          <div class="boton-carrito-final">
-           
-            <button ">x</button>
-             <h4>Gracias por confiar en nosotros</h4>
-        </div>
-        <div class=" cont-carrito-final">
-           <div class="img-carrito">
-                ${el.img}
-           </div>
-        <div>
-            <h5> ${el.titulo}</h5>
-            <p>${el.precio}</p>
-        </div>
-        </div>
-     
-       `})
-       carritoFlotante.classList.toggle("carrito-none")
-}else{
-    
-}
-       
-}
 
 // terminar compra 
 function terminarCarrito (){
