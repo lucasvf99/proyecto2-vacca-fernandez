@@ -28,7 +28,7 @@ body{
 header{
     background-color: $color-nav;
     color: $color-principal;
-    padding: 10px 30px;
+    
                 .navbar-collapse{
                     width: 60% !important;
                 }
@@ -41,8 +41,35 @@ header{
                     color: $color-principal !important; 
                 }
                 .container-fluid{
-                    display: flex ;
+                    display: flex  ;
                     justify-content: space-between !important;
+                            #contenedor-compra{
+                                width: 10%;
+                                padding-left: 10px;
+                                margin-right: 0px;
+                                margin-left: 30px;
+                                position:static;
+                                        .num-carrito{
+                                            color: $color-principal;
+                                            position: absolute;
+                                            top: 0rem;
+                                            align-items: center;
+                                            text-align: center;
+                                            right: 55px;
+                                            width: 30px;
+                                            border-radius: 50%;
+                                            background-color: $color-precio;
+                                        }
+                                        img{
+                                            width: 50%;
+                                        }
+                                        .caja-carrito{
+                                            height: 100%;
+                                            width: 100%;
+                                        }
+                                    
+                            }
+                        
                 }
                 .navbar-toggler{
                     background-color: white !important;
@@ -61,6 +88,7 @@ header{
                             ul.navbar-nav {
                                 width: 100% !important;
                             }
+
                 }
 }
 
@@ -315,8 +343,8 @@ footer{
                         margin: auto;
                         margin-bottom: 10px;
                     }
-                    ul{
-                        
+                    ul{ 
+                       margin-right: 20px;
                         li{
                             list-style: none;
                             text-align: center;

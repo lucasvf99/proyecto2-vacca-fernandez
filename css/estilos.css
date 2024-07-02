@@ -5,12 +5,14 @@
 /*color fonto crema index*/
 /*color pedidos precio y fondo*/
 /*color complementario precio */
+/*color del auto */
 /* CSS QUIENES SOMOS  */
 /*color principal body */
 /*color del nav */
 /*color fonto crema index*/
 /*color pedidos precio y fondo*/
 /*color complementario precio */
+/*color del auto */
 .box-img {
   background-image: url(../imagenes/bonifati-pueblo.jpeg);
   background-position: top center;
@@ -132,12 +134,12 @@
   object-fit: cover;
 }
 .meriendas-sect .carrusel-img .sello-marron {
-  width: 60% !important;
+  width: 30% !important;
   justify-self: center;
-  margin-left: 200px;
+  margin-left: 100px;
 }
 .meriendas-sect .carrusel-img .sello-marron img {
-  width: 40% !important;
+  width: 100% !important;
 }
 .meriendas-sect .box-text-merienda {
   padding: 0px 1rem;
@@ -305,11 +307,13 @@
 /*color fonto crema index*/
 /*color pedidos precio y fondo*/
 /*color complementario precio */
+/*color del auto */
 /*color principal body */
 /*color del nav */
 /*color fonto crema index*/
 /*color pedidos precio y fondo*/
 /*color complementario precio */
+/*color del auto */
 h2, p, h3 {
   color: #2B2B2B;
 }
@@ -344,6 +348,7 @@ h2 {
   font-size: 40px;
   margin-top: 0px;
   text-shadow: none;
+  text-align: center;
 }
 
 .separador-auto {
@@ -377,9 +382,8 @@ h2 {
 .main-pedidos .cajas-pedidos .tarrinas-img, .main-pedidos .cajas-pedidos .copas-img {
   width: 100%;
   object-fit: cover;
-  height: 70vh;
 }
-.main-pedidos .cajas-pedidos img {
+.main-pedidos .cajas-pedidos .tarrinas-img img, .main-pedidos .cajas-pedidos .copas-img img {
   width: 100%;
   height: 60vh;
   margin-bottom: 30px;
@@ -419,14 +423,45 @@ h2 {
 .contenedor-batidos .batidos-smooties .batido-item div a img {
   width: 100%;
 }
+.contenedor-batidos .batidos-smooties .batido-item div {
+  display: flex;
+  flex-direction: column;
+}
 .contenedor-batidos .batidos-smooties .batido-item div p {
   margin: 5px;
-  font-size: 23px;
+  font-size: 16px;
   color: #2B2B2B;
+  font-family: "Playwrite NG Modern", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 .contenedor-batidos .batidos-smooties .batido-item div .estilo-precio {
   color: #7fba9f;
   font-size: 20px;
+}
+.contenedor-batidos .batidos-smooties .batido-item div .boton-carrito {
+  background-color: white;
+  border: 1px #a3660c solid;
+  padding: 3px;
+  font-family: "Playwrite NG Modern", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 13px;
+  text-align: center;
+  align-self: center;
+  margin: 10px;
+  width: 50%;
+}
+.contenedor-batidos .batidos-smooties .batido-item div .boton-carrito:hover {
+  background-color: #2B2B2B;
+  color: white;
+}
+.contenedor-batidos .batidos-smooties .batido-item div .boton-carrito:active {
+  background-color: #2B2B2B;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .tartas-postres {
@@ -439,11 +474,16 @@ h2 {
 .tartas-postres .postre-item {
   width: 100%;
 }
+.tartas-postres .postre-item div {
+  display: flex;
+  flex-direction: column;
+}
 .tartas-postres .postre-item div h3 {
-  font-size: 30px;
+  font-size: 13px;
   margin: 30px 0px;
-  font-family: "Lobster", sans-serif;
-  font-weight: 400;
+  font-family: "Playwrite NG Modern", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
   font-style: normal;
 }
 .tartas-postres .postre-item div p {
@@ -454,6 +494,20 @@ h2 {
 .tartas-postres .postre-item div img {
   width: 100%;
   border-radius: 170px;
+}
+.tartas-postres .postre-item div .boton-carrito {
+  background-color: white;
+  border: 1px #a3660c solid;
+  padding: 3px;
+  font-family: "Playwrite NG Modern", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 13px;
+  text-align: center;
+  align-self: center;
+  margin: 10px;
+  width: 50%;
 }
 
 /*PRODUCTOS */
@@ -565,16 +619,155 @@ footer .cont-footer .foot-info ul li a {
     grid-column: 2/3;
   }
 }
+#contenedor-carrito {
+  background-color: #2B2B2B;
+  height: 100% !important;
+  width: 500px !important;
+  position: absolute;
+  right: 0px;
+  margin: 20px 0px;
+  padding: 0px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 100px 100px 100px #2B2B2B;
+}
+#contenedor-carrito div {
+  background-color: #2B2B2B;
+  padding: 5px;
+}
+#contenedor-carrito .caja-producto {
+  border-bottom: 1px #7fba9f solid;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 200px;
+  background-color: #2B2B2B;
+}
+#contenedor-carrito .caja-producto .img-carrito {
+  width: 30%;
+}
+#contenedor-carrito .caja-producto .img-carrito img {
+  width: 90%;
+  border-radius: 50%;
+}
+#contenedor-carrito .caja-producto h4 {
+  font-size: 15px;
+}
+#contenedor-carrito .caja-producto p {
+  color: white;
+}
+#contenedor-carrito .caja-producto button {
+  width: 30px;
+  height: 30px;
+  background-color: #7fba9f;
+  color: white;
+  border-radius: 50%;
+}
+#contenedor-carrito .caja-producto .caja-botones-productos {
+  display: flex;
+}
+#contenedor-carrito .caja-producto .caja-botones-productos button {
+  margin: 5px;
+}
+#contenedor-carrito div {
+  display: flex;
+}
+#contenedor-carrito div .terminar-compra {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: #2B2B2B;
+  color: white;
+  border: 1px solid #7fba9f;
+}
+#contenedor-carrito div .limpiar-carrito {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: #2B2B2B;
+  color: white;
+  border: 1px solid #7fba9f;
+}
+
+.carrito-none {
+  display: flex !important;
+}
+
+.total-carrito {
+  color: white;
+  background-color: #2B2B2B;
+  font-size: 19px;
+  margin: 10px;
+}
+
+#carrito-flotante {
+  position: fixed;
+  min-height: 117px;
+  width: 500px;
+  margin-left: 40%;
+  margin-top: -200px;
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  background-color: #2B2B2B;
+  padding: 10px;
+}
+#carrito-flotante h4 {
+  color: white;
+  font-family: "Playwrite NG Modern", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 20px;
+  text-align: center;
+}
+#carrito-flotante .cont-carrito-final {
+  display: flex;
+  margin: 10px;
+  justify-content: space-around;
+  border: 1px #7fba9f solid;
+  padding: 10px;
+}
+#carrito-flotante .cont-carrito-final .img-carrito {
+  width: 30%;
+}
+#carrito-flotante .cont-carrito-final .img-carrito img {
+  width: 100%;
+}
+#carrito-flotante .cont-carrito-final div {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+#carrito-flotante .cont-carrito-final div p {
+  color: #7fba9f;
+  font-size: 20px;
+}
+
+.boton-carrito-final button {
+  border-radius: 50%;
+  background-color: #7fba9f;
+  width: 20px;
+}
+
 /*color principal body */
 /*color del nav */
 /*color fonto crema index*/
 /*color pedidos precio y fondo*/
 /*color complementario precio */
+/*color del auto */
 /*color principal body */
 /*color del nav */
 /*color fonto crema index*/
 /*color pedidos precio y fondo*/
 /*color complementario precio */
+/*color del auto */
 /*CONTACTO*/
 .contacto-seccion {
   display: flex;
@@ -734,6 +927,7 @@ footer .cont-footer .foot-info ul li a {
 /*color fonto crema index*/
 /*color pedidos precio y fondo*/
 /*color complementario precio */
+/*color del auto */
 .titulo-sabores {
   width: 100%;
   height: 200px;
@@ -830,7 +1024,6 @@ body {
 header {
   background-color: #2B2B2B;
   color: white;
-  padding: 10px 30px;
 }
 header .navbar-collapse {
   width: 60% !important;
@@ -846,6 +1039,31 @@ header .navbar-nav .nav-link.active, header .navbar-nav .nav-link.show {
 header .container-fluid {
   display: flex;
   justify-content: space-between !important;
+}
+header .container-fluid #contenedor-compra {
+  width: 10%;
+  padding-left: 10px;
+  margin-right: 0px;
+  margin-left: 30px;
+  position: static;
+}
+header .container-fluid #contenedor-compra .num-carrito {
+  color: white;
+  position: absolute;
+  top: 0rem;
+  align-items: center;
+  text-align: center;
+  right: 55px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #7fba9f;
+}
+header .container-fluid #contenedor-compra img {
+  width: 50%;
+}
+header .container-fluid #contenedor-compra .caja-carrito {
+  height: 100%;
+  width: 100%;
 }
 header .navbar-toggler {
   background-color: white !important;
@@ -1103,6 +1321,9 @@ footer .cont-footer .foot-info h4 {
   text-align: center;
   margin: auto;
   margin-bottom: 10px;
+}
+footer .cont-footer .foot-info ul {
+  margin-right: 20px;
 }
 footer .cont-footer .foot-info ul li {
   list-style: none;
