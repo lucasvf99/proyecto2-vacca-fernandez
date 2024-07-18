@@ -1,5 +1,11 @@
 
 
+
+
+
+
+
+
 const botonCarrito = document.getElementById("carrito-compra")
 
 botonCarrito.addEventListener("click", (e)=>{
@@ -202,10 +208,11 @@ let botonModal = document.getElementById("modal-cierre")
 function mostrarCompra (){
 
 
-        console.dir(carritoArray)
-        if(carritoArray.lenght == 0){
+        console.dir(carritoDOM.parentElement.childNodes[2].data)
+        if(carritoDOM.parentElement.childNodes[2].data == 0 ){
            //    console.dir(carritoDOM .children)
            console.log("no hay nada ")
+           
         }else{
            // console.dir(modalJs)
             modalJs.classList.toggle("mostrar-modal")

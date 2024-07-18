@@ -1,0 +1,42 @@
+[
+    {
+        "nombre": "BATIDO CAPOMOSTRO",
+        "precio": "6,20€",
+        "img": "../imagenes/pedidos/batido-capoMostro.jpg"
+    },
+    {
+        "nombre": "BATIDO DI GELATO",
+        "precio": "4,10€",
+        "img": "../imagenes/pedidos/batido-gelato.jpg"
+    },
+    {
+        "nombre": "BATIDO TROPICAL",
+        "precio": "3,50€ ",
+        "img": "../imagenes/pedidos/batido-tropical.jpg"
+    },
+    {
+        "nombre": "SMOOTHIE",
+        "precio": "3.90€",
+        "img": "../imagenes/pedidos/batido-smotie.jpg"
+    },
+    {
+        "nombre": "GRANIZADA",
+        "precio": "2,40€",
+        "img": "../imagenes/pedidos/granizada.jpg"
+    },
+    {
+        "nombre": "CAPOCCINO",
+        "precio": "3,70€",
+        "img": "../imagenes/pedidos/capoccino.jpg"
+    },
+    {
+        "nombre": "BLANCO Y NEGRO",
+        "precio": "3,70€",
+        "img": "../imagenes/pedidos/blanco y negro.jpg"
+    },
+    {
+        "nombre": "CAFE HELADO",
+        "precio": "3,70€",
+        "img": "./imagenes/pedidos/cafe-helado.jpg"
+    }
+]
