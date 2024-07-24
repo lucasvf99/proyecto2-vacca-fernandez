@@ -1,0 +1,43 @@
+#productos{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin: 40px;
+        .cont-img{
+            width: 50%;
+                img{
+                    width: 100%;
+                }
+        }
+        .cont-info{
+            justify-content: start;
+                div{
+                    h4{
+                        margin-top: 40px;
+                    }
+                    select{
+                      width: 100%;
+                      border: none;
+                      margin-top: 20px;
+                    }
+                }
+                #precio{
+                    margin-top: 40px;
+                        p{
+                            font-size: 27px;
+                        }
+                }
+        }
+}
+
+#contenedor-carrito{
+    background-color: $color-nav;
+    width: 500px !important;
+    position: absolute; 
+    right: 0px;
+    margin: 20px 0px;
+    padding: 0px;
+    display: none;
+    flex-direction: column;
+    transition-timing-function: ease;
+}

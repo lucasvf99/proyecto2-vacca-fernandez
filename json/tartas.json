@@ -1,0 +1,92 @@
+[
+    {
+        "nombre": "TARTA ARTESANA RED VELVET",
+        "precio": "4,50 €",
+        "img": "../imagenes/tartas/Red-velvet-1-400x400.jpg"
+    },
+    {
+        "nombre": "TARTA ARTESANA CARROT CAKE",
+        "precio": "4.50 €",
+        "img": "../imagenes/tartas/carrot-cake.jpg"
+    },
+    {
+        "nombre": "TARTA ARTESANA MUERTE POR CHOCOLATE",
+        "precio": "4.50 € ",
+        "img": "../imagenes/tartas/muerte-choco.jpg"
+    },
+    {
+        "nombre": "TARTA ARTESANA DE LA NONNA",
+        "precio": "4.50 ",
+        "img": "../imagenes/tartas/nonna-cake.jpg"
+    },
+    {
+        "nombre": "TARTA CHEESCAKE DE PISTACHO",
+        "precio": "4.50 €",
+        "img":"../imagenes/tartas/pistacho-cake.jpg"    
+    },
+    {
+        "nombre": "TARTA CHEESECAKE DE FRESA",
+        "precio": "4.50 €",
+        "img": "../imagenes/tartas/fresa-cake.jpg"
+    },
+    {
+        "nombre": "TARTA CHEESCAKE DULCE DE LECHE",
+        "precio": "4.50 €",
+        "img": "../imagenes/tartas/ddl-cake.jpg"
+    },
+    {
+        "nombre": "TARTA CHEESCAKE KINDER BUENO",
+        "precio": "4.50 €",
+        "img":"../imagenes/tartas/kinder-bueno.jpg"
+    },
+    {
+        "nombre":"TARTALETA DE LIMON",
+        "precio": "4.50 €",
+        "img":"../imagenes/tartas/limon-cake.jpg"
+    },
+    {
+        "nombre":"COKE ARTESANA GIGANTE",
+        "precio": "4.50 €",
+        "img":"../imagenes/tartas/cokie-img.jpg"
+    },
+    {
+        "nombre":"BISCOLATO CON GELATO",
+        "precio": "4.20 €",
+        "img":"../imagenes/tartas/biscolato-img.jpg"
+    },
+    {
+        "nombre":"COPETA BROWNIE CON GELATO",
+        "precio": "4.20 €",
+        "img":"../imagenes/tartas/copetta-brownie.jpg"
+    },
+    {
+        "nombre":"PALMERA ARTESANA GIGANTE",
+        "precio": "4.50 €",
+        "img":"../imagenes/tartas/palmera-img.jpg"
+    },
+    {
+        "nombre":"PALMERA ARTESANA / GELATO",
+        "precio": "4.90 €",
+        "img":"../imagenes/tartas/palmera-rellena.jpg"
+    },
+    {
+        "nombre":"PILA DE TORTITAS / GELATO",
+        "precio": "5.20 €",
+        "img":"../imagenes/tartas/pila-tortitas.jpg"
+    },
+    {
+        "nombre":"CREPE",
+        "precio": "5.20 €",
+        "img":"../imagenes/tartas/crepe-img.jpg"
+    },
+    {
+        "nombre":"CREPE / GELATO",
+        "precio": "5.70 €",
+        "img":"../imagenes/tartas/crepe-helado.jpg"
+    },
+    {
+        "nombre":"ALFAJOR DE MAICENA",
+        "precio": "3,20 €",
+        "img":"../imagenes/tartas/alfajor-maicena.jpg"
+    }
+]

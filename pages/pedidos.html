@@ -1,434 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pedidos</title>
     <!--css-->
-    <link rel="stylesheet" href="../css/estilos.css">
-     <!--boostrap-->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <!--boostrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <!--font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Namdhinggo:wght@400;500;600;700;800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Slackside+One&display=swap" rel="stylesheet">
-            <!--FONT h3 postre item-->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Namdhinggo:wght@400;500;600;700;800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Slackside+One&display=swap" rel="stylesheet">
-            <!--font h3 principal -->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Namdhinggo:wght@400;500;600;700;800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Slackside+One&display=swap" rel="stylesheet">
-            <!--font boton-carrito-->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Namdhinggo:wght@400;500;600;700;800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Slackside+One&display=swap"
+      rel="stylesheet"
+    />
+    <!--FONT h3 postre item-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Namdhinggo:wght@400;500;600;700;800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Slackside+One&display=swap"
+      rel="stylesheet"
+    />
+    <!--font h3 principal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Namdhinggo:wght@400;500;600;700;800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Slackside+One&display=swap"
+      rel="stylesheet"
+    />
+    <!--font boton-carrito-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
   <body>
     <!--HEADER-->
     <header>
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid">
-                  <div class="logo-boton">
-                      <div>
-                        <a class="navbar-brand" href="../index.html"><img src="../imagenes/LOGO.svg" ></a>
-                      </div>
-                          <div> 
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                              <span class="navbar-toggler-icon"></span>
-                            </button>
-                          </div>
-                  </div>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                          <ul class="navbar-nav">
-                            <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="../index.html">HOME</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="./quienessomos.html">QUIENES SOMOS </a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="./pedidos.html">PEDIDOS</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="./contacto.html">CONTACTO</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="./sabores.html">SABORES</a>
-                            </li>
-                          </ul>
-              </div>
-              <div id="contenedor-compra">
-                <a href=""  id ="carrito-compra" >  <img src="../imagenes/carrito.jpeg" alt=""></a>
-                
-                <div id="contenedor-carrito" >
-
-                </div>
-       </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <div class="logo-boton">
+            <div>
+              <a class="navbar-brand" href="../index.html"
+                ><img src="../imagenes/LOGO.svg"
+              /></a>
             </div>
-          </nav>
-        </header>
+            <div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >HOME</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./quienessomos.html"
+                  >QUIENES SOMOS
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pedidos.html">PEDIDOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contacto.html">CONTACTO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./sabores.html">SABORES</a>
+              </li>
+            </ul>
+          </div>
+          <div id="contenedor-compra">
+            <a href="" id="carrito-compra">
+              <img src="../imagenes/carrito.jpeg" alt=""
+            /></a>
+            <span id="numero-carrito" class="num-carrito"></span>
+            <div id="contenedor-carrito"></div>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-
-<!--Pide lo que quieras -->
+    <!--Pide lo que quieras -->
 
     <section class="caja-titulo">
-       <div >
-        <h3>Pide lo que quieras </h3>
-        <h2>Te lo llevamos a domicilio </h2>
-       </div>
+      <div>
+        <h3>Pide lo que quieras</h3>
+        <h2>Te lo llevamos a domicilio</h2>
+      </div>
     </section>
 
-
-
-<!--Separador-->
+    <!--Separador-->
     <div class="separador-auto">
-        <img src="../imagenes/pedidos/separador.png" alt="separador-auto">
+      <img src="../imagenes/pedidos/separador.png" alt="separador-auto" />
     </div>
 
-<!--MODAL JS -->
+ 
 
-<div id="modal-js" class="modal-prin">
-    <div class="modal-cont">
-        <button id="modal-cierre" class="boton-modal">x</button>
-        <h5>¡Gracias por su compra! </h5>
-    </div>
-</div>
-
-<!--Pedidos-->
+    <!--Pedidos-->
     <main class="main-pedidos">
-        <div>
-            <h2>Helados Artesanales </h2>
+      <div>
+        <h2>Helados Artesanales</h2>
+      </div>
+      <div class="cajas-pedidos">
+        <div class="tarrinas-img apartado" >
+          <a href="./tarrinas.html" target="_blank" >
+            <img src="../imagenes/pedidos/tarrinas.jpg" alt="tarrina-img" />
+          </a>
+          <h4>Tarrinas</h4>
         </div>
-             <div class="cajas-pedidos">
-                          <div class="tarrinas-img">
-                                <img src="../imagenes/pedidos/tarrinas.jpg" alt="tarrina-img">
-                                <h4>Tarrinas </h4>
-                            </div>   
-                                <div class="copas-img">
-                                    <img src="../imagenes/pedidos/Copa-al-gusto.jpg" alt="copa-img">
-                                    <h4>Copas al Gusto </h4>
-                                </div>
-             </div>
+        <div class="copas-img apartado" >
+        <a href="./tarrinas.html" target="_blank">
+          <img src="../imagenes/pedidos/Copa-al-gusto.jpg" alt="copa-img" />
+        </a>
+          <h4>Copas al Gusto</h4>
+        </div>
+      </div>
     </main>
-                    <!--Separador -->
+    <!--Separador -->
 
     <div class="separador-auto">
-        <img src="../imagenes/pedidos/separador.png" alt="separador-auto">
+      <img src="../imagenes/pedidos/separador.png" alt="separador-auto" />
     </div>
 
-                    <!--Bebidas y smooties -->
-
+    <!--Bebidas y smooties -->
 
     <section class="contenedor-batidos">
-        <div>
-            <h2>Bebidas y Smooties</h2>
-        </div>
-        <div class="batidos-smooties">
-            <div class="batido-item">
-                <div>
-                    <a href="">
-                        <img src="../imagenes/pedidos/batido-capoMostro.jpg" alt="batido-mostro">
-                    </a>
-                </div>
-                    <div>
-                        <p>BATIDO CAPOMOSTRO</p>
-                        <p class="estilo-precio"> 6,20€</p>
-                        <button class="boton-carrito">Agregar al carrito </button>
-                    </div>
-            </div>
-         
-        </div>
+      <div>
+        <h2>Bebidas y Smooties</h2>
+      </div>
+      <div id="batidos-smooties"></div>
     </section>
 
     <!--separador-->
 
     <div class="separador-auto">
-        <img src="../imagenes/pedidos/separador.png" alt="separador-auto">
+      <img src="../imagenes/pedidos/separador.png" alt="separador-auto" />
     </div>
     <!--TARTAS -->
 
     <section class="contenedor-batidos">
-        <div>
-            <h2>Tartas y Postres</h2>
-        </div>
-        <div class="tartas-postres">
-            <div class="postre-item">
-                <div>
-                    <a href="">
-                        <img src="../imagenes/tartas/Red-velvet-1-400x400.jpg" alt="red-velvet">
-                    </a>
-                </div>
-                    <div>
-                        <h3>TARTA ARTESANA RED VELVET</h3>
-                        <p> 4,50 </p>
-                        <button class="boton-carrito">Agregar al carrito </button>
-                    </div>
-            </div>
-                    <div class="postre-item">
-                            <div>
-                                <a href="">
-                                    <img src="../imagenes/tartas/carrot-cake.jpg" alt="carrot-cake">
-                                </a>
-                            </div>
-                                <div>
-                                    <h3>TARTA ARTESANA CARROT CAKE</h3>
-                                    <p>4.50</p>
-                                    <button class="boton-carrito">Agregar al carrito </button>
-                                </div>
-                    </div>
-                            <div class="postre-item">
-                                <div>
-                                    <a href="">
-                                        <img src="../imagenes/tartas/muerte-choco.jpg" alt="muerte-choco">
-                                    </a>
-                                </div>
-                                    <div>
-                                        <h3>TARTA ARTESANA MUERTE POR CHOCOLATE</h3>
-                                        <p>4.50</p>
-                                        <button class="boton-carrito">Agregar al carrito </button>
-                                    </div>
-                            </div>
-                                    <div class="postre-item">
-                                        <div>
-                                            <a href="">
-                                                <img src="../imagenes/tartas/nonna-cake.jpg" alt="nonna-cake">
-                                            </a>
-                                        </div>
-                                            <div>
-                                                <h3>TARTA ARTESANA DE LA NONNA </h3>
-                                                <p>4.50</p>
-                                                <button class="boton-carrito">Agregar al carrito </button>
-                                            </div>
-                                    </div>
-                                            <div class="postre-item">
-                                                <div>
-                                                    <a href="">
-                                                        <img src="../imagenes/tartas/pistacho-cake.jpg" alt="pistacho-cake">
-                                                    </a>
-                                                </div>
-                                                    <div>
-                                                        <h3>TARTA CHEESCAKE DE PISTACHO  </h3>
-                                                        <p>4.50</p>
-                                                        <button class="boton-carrito">Agregar al carrito </button>
-                                                    </div>
-                                            </div>
-                                                    <div class="postre-item">
-                                                        <div>
-                                                            <a href="">
-                                                                <img src="../imagenes/tartas/fresa-cake.jpg" alt="fresa-cake">
-                                                            </a>
-                                                        </div>
-                                                            <div>
-                                                                <h3>TARTA CHEESECAKE DE FRESA</h3>
-                                                                <p>4.50</p>
-                                                                <button class="boton-carrito">Agregar al carrito </button>
-                                                            </div>
-                                                    </div>
-                                                            <div class="postre-item"> 
-                                                                <div>
-                                                                    <a href="">
-                                                                        <img src="../imagenes/tartas/ddl-cake.jpg" alt="ddl-cake">
-                                                                    </a>
-                                                                </div>
-                                                                    <div>
-                                                                        <h3>TARTA CHEESCAKE DULCE DE LECHE</h3>
-                                                                        <p>4.50</p>
-                                                                        <button class="boton-carrito">Agregar al carrito </button>
-                                                                    </div>
-                                                            </div>
-
-                                                                    <div class="postre-item"> 
-                                                                        <div>
-                                                                            <a href="">
-                                                                                <img src="../imagenes/tartas/kinder-bueno.jpg" alt="kinder-bueno">
-                                                                            </a>
-                                                                        </div>
-                                                                            <div>
-                                                                                <h3>TARTA CHEESCAKE KINDER BUENO  </h3>
-                                                                                <p>4.50</p>
-                                                                                <button class="boton-carrito">Agregar al carrito </button>
-                                                                            </div>
-                                                                    </div>
-                                                        
-                                                        <div class="postre-item"> 
-                                                            <div>
-                                                                <a href="">
-                                                                    <img src="../imagenes/tartas/limon-cake.jpg" alt="limon-cake">
-                                                                </a>
-                                                            </div>
-                                                                <div>
-                                                                    <h3>TARTALETA DE LIMON  </h3>
-                                                                    <p>4.50</p>
-                                                                    <button class="boton-carrito">Agregar al carrito </button>
-                                                                </div>
-                                                        </div>
-
-                                            <div class="postre-item"> 
-                                                <div>
-                                                    <a href="">
-                                                        <img src="../imagenes/tartas/cokie-img.jpg" alt="cokie-img">
-                                                    </a>
-                                                </div>
-                                                    <div>
-                                                        <h3>COKE ARTESANA GIGANTE</h3>
-                                                        <p>4.50</p>
-                                                        <button class="boton-carrito">Agregar al carrito </button>
-                                                    </div>
-                                            </div>
-                                <div class="postre-item"> 
-                                    <div>
-                                        <a href="">
-                                            <img src="../imagenes/tartas/biscolato-img.jpg" alt="biscolato-img">
-                                        </a>
-                                    </div>
-                                        <div>
-                                            <h3>BISCOLATO CON GELATO</h3>
-                                            <p>4,20</p>
-                                            <button class="boton-carrito">Agregar al carrito </button>
-                                        </div>
-                                </div>
-
-                        <div class="postre-item"> 
-                            <div>
-                                <a href="">
-                                    <img src="../imagenes/tartas/copetta-brownie.jpg" alt="copetta-brownie">
-                                </a>
-                            </div>
-                                <div>
-                                    <h3>COPETA BROWNIE CON GELATO </h3>
-                                    <p>4,20</p>
-                                    <button class="boton-carrito">Agregar al carrito </button>
-                                </div>
-                        </div>
-
-                <div class="postre-item"> 
-                    <div>
-                        <a href="">
-                            <img src="../imagenes/tartas/palmera-img.jpg" alt="palmera-img">
-                        </a>
-                    </div>
-                        <div>
-                            <h3>PALMERA ARTESANA GIGANTE</h3>
-                            <p>4,50</p>
-                            <button class="boton-carrito">Agregar al carrito </button>
-                        </div>
-                </div>
-        <div class="postre-item"> 
-            <div>
-                <a href="">
-                    <img src="../imagenes/tartas/palmera-rellena.jpg" alt="palmera-rellena">
-                </a>
-            </div>
-                <div>
-                    <h3>PALMERA ARTESANA CON GELATO</h3>
-                    <p>4,90</p>
-                    <button class="boton-carrito">Agregar al carrito </button>
-                </div>
-        </div>
-<div class="postre-item"> 
-    <div>
-        <a href="">
-            <img src="../imagenes/tartas/pila-tortitas.jpg" alt="pila-tortitas">
-        </a>
-    </div>
-        <div>
-            <h3>PILA DE TORTITAS CON GELATO </h3>
-            <p>5,20</p>
-            <button class="boton-carrito">Agregar al carrito </button>
-        </div>
-</div>
-        <div class="postre-item"> 
-            <div>
-                <a href="">
-                    <img src="../imagenes/tartas/crepe-img.jpg" alt="crepe-img">
-                </a>
-            </div>
-                <div>
-                    <h3>CREPE</h3>
-                    <p>5,20</p>
-                    <button class="boton-carrito">Agregar al carrito </button>
-                </div>
-        </div>
-                <div class="postre-item crepe-item"> 
-                    <div>
-                        <a href="">
-                            <img src="../imagenes/tartas/crepe-helado.jpg" alt="crepe-helado">
-                        </a>
-                    </div>
-                        <div>
-                            <h3>CREPE CON GELATO</h3>
-                            <p>5,70</p>
-                            <button class="boton-carrito">Agregar al carrito </button>
-                        </div>
-                </div>
-                        <div class="postre-item alfajor-item"> 
-                            <div>
-                                <a href="">
-                                    <img src="../imagenes/tartas/alfajor-maicena.jpg" alt="alfajor-maicena">
-                                </a>
-                            </div>
-                                <div>
-                                    <h3>ALFAJOR DE MAICENA</h3>
-                                    <p>3,20</p>
-                                    <button class="boton-carrito">Agregar al carrito </button>
-                                </div>
-                        </div>
-                                
-</div>
+      <div>
+        <h2>Tartas y Postres</h2>
+      </div>
+      <div id="tartas-postres"> 
+      </div>
     </section>
-<!--FOOTER-->
+    <!--FOOTER-->
 
-<footer>
-    <div class="separator-footer">
-      <img src="../imagenes/Captura de pantalla (7).png" alt="separator-footer">
-    </div>
-          <div class="cont-footer">
-              <div class="foot-info">
-                  <h4>Donde estamos</h4>
-                      <ul>
-                          <li>Dirección: Av. Plutarco 61</li>
-                          <li>29010 Málaga</li>
-                          <li>Horario: LU a DO de 11 a 2 h.</li>
-                      </ul>
-              </div>
-                   <div class="foot-info">
-                      <h4>Contacto</h4>
-                      <ul>
-                          <li>Teléfono: 952 91 72 91</li>
-                          <li>Email: info@capobonifati.com</li>
-                      </ul>
-                   </div>
-                       <div class="foot-info">
-                          <h4>Capo Bonifati</h4>
-                          <ul>
-                              <li><a href="../index.html">Inicio</a></li>
-                              <li><a href="./pedidos.html">Productos</a></li>
-                              <li><a href="./quienessomos.html">Quienes Somos</a></li>
-                              <li><a href="./contacto.html"></a>Contacto</li>
-                              <li><a href="./sabores.html"></a>Sabores</li>
-                          </ul>
-                       </div>
-                           <div class="foot-info">
-                              <h4>Siguenos</h4>
-                              <ul>
-                                <li><a href="https://www.instagram.com/capobonifati/" target="_blank">Instagram</a></li>
-                                <li><a href="https://www.facebook.com/CapoBonifati/" target="_blank">Facebook</a></li>
-                                <li><a href="https://twitter.com/CapoBonifati" target="_blank">Twitter</a></li>
-                                <li><a href="https://www.tiktok.com/@capobonifatigelato?lang=es" target="_blank">Tik-Tok</a></li>
-                              </ul>
-                           </div>
-          </div>
-</footer>
-<!--JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="../index.js"></script>
-</body>
+    <footer>
+      <div class="separator-footer">
+        <img
+          src="../imagenes/Captura de pantalla (7).png"
+          alt="separator-footer"
+        />
+      </div>
+      <div class="cont-footer">
+        <div class="foot-info">
+          <h4>Donde estamos</h4>
+          <ul>
+            <li>Dirección: Av. Plutarco 61</li>
+            <li>29010 Málaga</li>
+            <li>Horario: LU a DO de 11 a 2 h.</li>
+          </ul>
+        </div>
+        <div class="foot-info">
+          <h4>Contacto</h4>
+          <ul>
+            <li>Teléfono: 952 91 72 91</li>
+            <li>Email: info@capobonifati.com</li>
+          </ul>
+        </div>
+        <div class="foot-info">
+          <h4>Capo Bonifati</h4>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./pedidos.html">Productos</a></li>
+            <li><a href="./quienessomos.html">Quienes Somos</a></li>
+            <li><a href="./contacto.html"></a>Contacto</li>
+            <li><a href="./sabores.html"></a>Sabores</li>
+          </ul>
+        </div>
+        <div class="foot-info">
+          <h4>Siguenos</h4>
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/capobonifati/" target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://www.facebook.com/CapoBonifati/" target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://twitter.com/CapoBonifati" target="_blank"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/@capobonifatigelato?lang=es"
+                target="_blank"
+                >Tik-Tok</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!--JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../index.js"></script>
+
+    <!--sweet alarm-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
 </html>
-
-
-
-
-
-

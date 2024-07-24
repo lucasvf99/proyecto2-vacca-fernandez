@@ -37,6 +37,6 @@
     {
         "nombre": "CAFE HELADO",
         "precio": "3,70€",
-        "img": "./imagenes/pedidos/cafe-helado.jpg"
+        "img": "../imagenes/pedidos/cafe-helado.jpg"
     }
 ]

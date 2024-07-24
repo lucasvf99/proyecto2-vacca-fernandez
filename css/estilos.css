@@ -403,7 +403,7 @@ h2 {
 .contenedor-batidos div h2 {
   font-size: 40px;
 }
-.contenedor-batidos .batidos-smooties {
+.contenedor-batidos #batidos-smooties {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(7, 1fr);
@@ -411,23 +411,23 @@ h2 {
   row-gap: 40px;
   text-align: start;
 }
-.contenedor-batidos .batidos-smooties .batido-item {
+.contenedor-batidos #batidos-smooties .batido-item {
   width: 100%;
   display: flex;
   flex-direction: column;
   object-fit: cover;
 }
-.contenedor-batidos .batidos-smooties .batido-item div {
+.contenedor-batidos #batidos-smooties .batido-item div {
   margin: 10px 0px;
 }
-.contenedor-batidos .batidos-smooties .batido-item div a img {
+.contenedor-batidos #batidos-smooties .batido-item div a img {
   width: 100%;
 }
-.contenedor-batidos .batidos-smooties .batido-item div {
+.contenedor-batidos #batidos-smooties .batido-item div {
   display: flex;
   flex-direction: column;
 }
-.contenedor-batidos .batidos-smooties .batido-item div p {
+.contenedor-batidos #batidos-smooties .batido-item div p {
   margin: 5px;
   font-size: 16px;
   color: #2B2B2B;
@@ -436,11 +436,11 @@ h2 {
   font-weight: weight;
   font-style: normal;
 }
-.contenedor-batidos .batidos-smooties .batido-item div .estilo-precio {
+.contenedor-batidos #batidos-smooties .batido-item div .estilo-precio {
   color: #7fba9f;
   font-size: 20px;
 }
-.contenedor-batidos .batidos-smooties .batido-item div .boton-carrito {
+.contenedor-batidos #batidos-smooties .batido-item div .boton-carrito {
   background-color: white;
   border: 1px #a3660c solid;
   padding: 3px;
@@ -454,31 +454,31 @@ h2 {
   margin: 10px;
   width: 50%;
 }
-.contenedor-batidos .batidos-smooties .batido-item div .boton-carrito:hover {
+.contenedor-batidos #batidos-smooties .batido-item div .boton-carrito:hover {
   background-color: #2B2B2B;
   color: white;
 }
-.contenedor-batidos .batidos-smooties .batido-item div .boton-carrito:active {
+.contenedor-batidos #batidos-smooties .batido-item div .boton-carrito:active {
   background-color: #2B2B2B;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-.tartas-postres {
+#tartas-postres {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(18, 1fr);
   row-gap: 30px;
   column-gap: 20px;
 }
-.tartas-postres .postre-item {
+#tartas-postres .postre-item {
   width: 100%;
 }
-.tartas-postres .postre-item div {
+#tartas-postres .postre-item div {
   display: flex;
   flex-direction: column;
 }
-.tartas-postres .postre-item div h3 {
+#tartas-postres .postre-item div h3 {
   font-size: 13px;
   margin: 30px 0px;
   font-family: "Playwrite NG Modern", cursive;
@@ -486,16 +486,16 @@ h2 {
   font-weight: weight;
   font-style: normal;
 }
-.tartas-postres .postre-item div p {
+#tartas-postres .postre-item div p {
   margin: 10px 0px;
   color: #7fba9f;
   font-size: 20px;
 }
-.tartas-postres .postre-item div img {
+#tartas-postres .postre-item div img {
   width: 100%;
   border-radius: 170px;
 }
-.tartas-postres .postre-item div .boton-carrito {
+#tartas-postres .postre-item div .boton-carrito {
   background-color: white;
   border: 1px #a3660c solid;
   padding: 3px;
@@ -560,16 +560,16 @@ footer .cont-footer .foot-info ul li a {
   .contenedor-batidos {
     margin: 10px !important;
   }
-  .contenedor-batidos .batidos-smooties {
+  .contenedor-batidos #batidos-smooties {
     grid-template-columns: repeat(3, 1fr) !important;
     grid-template-rows: repeat(3, 1fr) !important;
   }
   /*TARTAS Y POSTRES*/
-  .tartas-postres {
+  #tartas-postres {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }
-  .tartas-postres .postre-item {
+  #tartas-postres .postre-item {
     width: 90%;
   }
 }
@@ -601,34 +601,35 @@ footer .cont-footer .foot-info ul li a {
     font-size: 50px;
     margin-bottom: 70px;
   }
-  .contenedor-batidos .batidos-smooties {
+  .contenedor-batidos #batidos-smooties {
     grid-template-columns: repeat(4, 1fr) !important;
     grid-template-rows: repeat(2, 1fr) !important;
   }
-  .tartas-postres {
+  #tartas-postres {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
   }
-  .tartas-postres .postre-item a img:hover {
+  #tartas-postres .postre-item a img:hover {
     box-shadow: 0px 0px 0px 10px #f6be6a;
   }
-  .tartas-postres .alfajor-item {
+  #tartas-postres .alfajor-item {
     grid-column: 4/3;
   }
-  .tartas-postres .crepe-item {
+  #tartas-postres .crepe-item {
     grid-column: 2/3;
   }
 }
 #contenedor-carrito {
   background-color: #2B2B2B;
-  height: 100% !important;
   width: 500px !important;
+  height: 100%;
   position: absolute;
   right: 0px;
   margin: 20px 0px;
   padding: 0px;
   display: none;
   flex-direction: column;
+  transition-timing-function: ease;
 }
 #contenedor-carrito div {
   background-color: #2B2B2B;
@@ -740,6 +741,7 @@ footer .cont-footer .foot-info ul li a {
 
 .mostrar-modal {
   display: block;
+  transition: height 2s;
 }
 
 /*color principal body */
@@ -997,6 +999,48 @@ footer .cont-footer .foot-info ul li a {
     width: 100%;
   }
 }
+#productos {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin: 40px;
+}
+#productos .cont-img {
+  width: 50%;
+}
+#productos .cont-img img {
+  width: 100%;
+}
+#productos .cont-info {
+  justify-content: start;
+}
+#productos .cont-info div h4 {
+  margin-top: 40px;
+}
+#productos .cont-info div select {
+  width: 100%;
+  border: none;
+  margin-top: 20px;
+}
+#productos .cont-info #precio {
+  margin-top: 40px;
+}
+#productos .cont-info #precio p {
+  font-size: 27px;
+}
+
+#contenedor-carrito {
+  background-color: #2B2B2B;
+  width: 500px !important;
+  position: absolute;
+  right: 0px;
+  margin: 20px 0px;
+  padding: 0px;
+  display: none;
+  flex-direction: column;
+  transition-timing-function: ease;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1030,17 +1074,18 @@ header .container-fluid #contenedor-compra {
   width: 10%;
   padding-left: 10px;
   margin-right: 0px;
-  margin-left: 30px;
+  margin-left: 0px;
   position: static;
 }
 header .container-fluid #contenedor-compra .num-carrito {
   color: white;
   position: absolute;
-  top: 0rem;
+  top: 5px;
   align-items: center;
   text-align: center;
-  right: 55px;
+  right: 50px;
   width: 30px;
+  height: 27px;
   border-radius: 50%;
   background-color: #7fba9f;
 }
@@ -1429,7 +1474,8 @@ footer .cont-footer .foot-info ul li a {
   }
   header nav ul {
     width: 100%;
-    font-size: 1rem;
+    font-size: 14px;
+    justify-content: center;
   }
   /*Carrusel */
   .carousel-item img {

@@ -1,26 +1,84 @@
+//exportar funciones 
+
+
+//crear tartas html
+
+let cajaTartas = document.getElementById("tartas-postres")
+
+const creadoraDeTartas = async  (json,id) =>{
+    let res = await fetch (json)
+    let data = await res.json()
+
+    data.forEach( el => {
+        id.innerHTML += `
+            <div class="postre-item">
+                <div>
+                    <a href="">
+                        <img src="${el.img}" alt=""${el.nombre}>
+                    </a>
+                </div>
+                    <div>
+                        <p>${el.nombre}</p>
+                        <p class="estilo-precio">${el.precio}</p>
+                        <button class="boton-carrito">Agregar al carrito </button>
+                    </div>
+             </div>
+        `
+    })
+    agregadoraDeEventos(agregarCarrito, "boton-carrito", "click")
+
+}
+
+creadoraDeTartas("../json/tartas.json", cajaTartas )
 
 
 
+//crear batidos html
+
+let cajaProductos = document.getElementById("batidos-smooties")
+
+const creadoraDeProductos = async  () =>{
+    let res = await fetch ("../json/productos.json")
+    let data = await res.json()
+
+    data.forEach( el => {
+        cajaProductos.innerHTML += `
+            <div class="batido-item">
+                <div>
+                    <a href="">
+                        <img src="${el.img}" alt="batido-mostro">
+                    </a>
+                </div>
+                    <div>
+                        <p>${el.nombre}</p>
+                        <p class="estilo-precio">${el.precio}</p>
+                        <button class="boton-carrito">Agregar al carrito </button>
+                    </div>
+             </div>
+        `
+    })
+    agregadoraDeEventos(agregarCarrito, "boton-carrito", "click")
+
+}
+
+creadoraDeProductos("../json/productos.json",cajaProductos)
 
 
-
-
+//mostrar o no carrito
 
 const botonCarrito = document.getElementById("carrito-compra")
 
 botonCarrito.addEventListener("click", (e)=>{
         carritoDOM.classList.toggle("carrito-none")
-        e.preventDefault()
-
-        
+        e.preventDefault()  
 })
 
 const carritoDOM = document.getElementById("contenedor-carrito")
 
 
-
-
 let carritoArray =JSON.parse(localStorage.getItem("carrito")) || []
+
+//agregadora de eventos 
 
 function agregadoraDeEventos (evento, clase, eventoString){
 
@@ -32,21 +90,19 @@ function agregadoraDeEventos (evento, clase, eventoString){
     })
 }
 
+
+
 function actualizadora (){
     mostrarCarrito()
-    agregadoraDeEventos(eliminarProducto, "eliminar-producto", "click")
 }
 
-
-// numero arriba del carrito
-
-let numCarrito = document.getElementById("carrito-compra")
+//numero en carrito 
+let spanCarrito = document.getElementById("numero-carrito")
 
 function numeroArribaCarrito (cantidad){
+        spanCarrito.innerHTML = `${cantidad} <p>`
+}     
 
-        numCarrito.innerHTML += `<p class="num-carrito">${cantidad}</p>`
-        
-}
 
 //muestra el array en el carrito 
 
@@ -85,7 +141,7 @@ function mostrarCarrito (){
         agregadoraDeEventos(botonAgregarProducto, "agregar-producto", "click") 
         agregadoraDeEventos(terminarCarrito, "terminar-compra", "click")
         agregadoraDeEventos(limpiarCarrito, "limpiar-carrito", "click")
-        agregadoraDeEventos(mostrarCompra, "terminar-compra", "click")
+        agregadoraDeEventos(mostrarCarrito, "terminar-compra", "click")
         
 
         //numero en carrito
@@ -107,10 +163,25 @@ function terminarCarrito (){
 }
 
 function limpiarCarrito (){
+    Swal.fire({
+        title: " Quiere eliminar el carrito?",
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: "Si",
+        denyButtonText: `No`
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire("Carrito eliminado");
+            localStorage.clear()
+            carritoArray = []
+            mostrarCarrito()
+            carritoDOM.classList.toggle("carrito-none")
+        } else if (result.isDenied) {
+          Swal.fire("Continuemos la compra ");
+        }
+      });
     document.getElementsByClassName("limpiar-carrito")
-    localStorage.clear()
-    carritoArray = []
-    mostrarCarrito()
+
 
 }
 
@@ -119,7 +190,7 @@ function limpiarCarrito (){
 // agregando array de procuctos al carrito 
 
 function agregarCarrito (e){
-   // console.dir(e)
+    console.dir(e)
     let titulo = (e.target.parentElement.children[0].innerText)
     let precio = (e.target.parentElement.children[1].innerText)
     let img = (e.target.parentElement.parentElement.children[0].children[0].children[0].outerHTML)
@@ -143,11 +214,14 @@ function agregarCarrito (e){
             img
         })
     }
-
-   // alert("Producto agregado ")
+    //boton sweet 
+     Swal.fire({
+        title: "Producto agregado",
+        icon: "success"
+      });
+    
     localStorage.setItem("carrito", JSON.stringify(carritoArray))
     actualizadora ()
-    //console.log(carritoDOM.children)
 }
 
 //agregar productos 
@@ -169,7 +243,7 @@ function botonAgregarProducto (e){
 //eliminar producto 
 
 function eliminarProducto (e){
-   // console.dir(e.target.parentElement.parentElement)
+
     let titulo =(e.target.parentElement.parentElement.children[1].innerText) //traemos el titulo de la caja padre 
     let titulos = carritoArray.map(el => el.titulo) 
     
@@ -188,7 +262,7 @@ function eliminarProducto (e){
     mostrarCarrito()
 }
 
-agregadoraDeEventos(agregarCarrito, "boton-carrito", "click")
+
 
 
 
@@ -198,36 +272,18 @@ document.addEventListener("DOMContentLoaded",()=>{
 })
 
 
+// tarrina 
 
+let apartado = document.getElementsByClassName("apartado")
+console.dir(apartado)
 
-//Modal js 
-
-let modalJs = document.getElementById("modal-js")
-let botonModal = document.getElementById("modal-cierre")
-
-function mostrarCompra (){
-
-
-        console.dir(carritoDOM.parentElement.childNodes[2].data)
-        if(carritoDOM.parentElement.childNodes[2].data == 0 ){
-           //    console.dir(carritoDOM .children)
-           console.log("no hay nada ")
-           
-        }else{
-           // console.dir(modalJs)
-            modalJs.classList.toggle("mostrar-modal")
-        }
-        
-        carritoDOM.classList.toggle("carrito-none")
-
-        
+function conseguirDatosTarrina  (e) {
+   
+    let nombre= e.target.parentElement.parentElement.children[1].innerText  
+    let img = e.target.outerHTML
+    localStorage.setItem("nombreProducto", JSON.stringify(nombre))
+    localStorage.setItem("imgProducto",JSON.stringify(img) )
 }
 
-function cerrarModal (){
-    botonModal.addEventListener("click",()=>{
-        modalJs.classList.toggle("mostrar-modal")
-    })
-}
+agregadoraDeEventos(conseguirDatosTarrina,"apartado", "click")
 
-
-cerrarModal()

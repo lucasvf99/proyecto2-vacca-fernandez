@@ -1,0 +1,12 @@
+{
+    "tarrinas":{
+        "precio1":9.20 ,
+        "precio2":17.10
+    },
+    "copasAlGusto":{
+        "precio1": 4.20,
+        "precio2": 4.80,
+        "precio3": 5.50
+    }
+} 
+
