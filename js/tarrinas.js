@@ -474,7 +474,7 @@ function agregarAlCarrito (el){
       
 
         localStorage.setItem("carrito", JSON.stringify(carritoArray))
-        actualizadora ()
+        actualizadora ()    
 }
 
 
