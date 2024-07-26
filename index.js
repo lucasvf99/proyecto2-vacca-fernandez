@@ -156,10 +156,23 @@ function mostrarCarrito (){
 
 
 // terminar compra 
-function terminarCarrito (){
-    localStorage.clear()
-    carritoArray = []
-    mostrarCarrito()
+function terminarCarrito (e){
+            if(carritoArray.length >= 1  ){
+                Swal.fire({
+                    title: "Compra realizada",
+                    icon: "success"
+                  });
+                  carritoDOM.classList.toggle("carrito-none")
+            }else if (carritoArray += 0) {
+                Swal.fire({
+                    title: "No hay nada en el carrito ",
+                    icon: "error"
+                  });
+            }
+            localStorage.clear()
+            carritoArray = [] 
+            mostrarCarrito()
+         
 }
 
 function limpiarCarrito (){
@@ -190,7 +203,6 @@ function limpiarCarrito (){
 // agregando array de procuctos al carrito 
 
 function agregarCarrito (e){
-    console.dir(e)
     let titulo = (e.target.parentElement.children[0].innerText)
     let precio = (e.target.parentElement.children[1].innerText)
     let img = (e.target.parentElement.parentElement.children[0].children[0].children[0].outerHTML)
@@ -201,10 +213,9 @@ function agregarCarrito (e){
     })){
         let titulos = carritoArray.map(el => el.titulo)
         let indice = titulos.indexOf(titulo)
-       
         
         carritoArray[indice].cantidad ++ 
-        
+
     }else{
         carritoArray.push({
 
@@ -222,6 +233,7 @@ function agregarCarrito (e){
     
     localStorage.setItem("carrito", JSON.stringify(carritoArray))
     actualizadora ()
+    console.log(carritoArray)
 }
 
 //agregar productos 
@@ -275,7 +287,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 // tarrina 
 
 let apartado = document.getElementsByClassName("apartado")
-console.dir(apartado)
 
 function conseguirDatosTarrina  (e) {
    
@@ -286,4 +297,7 @@ function conseguirDatosTarrina  (e) {
 }
 
 agregadoraDeEventos(conseguirDatosTarrina,"apartado", "click")
+
+
+
 

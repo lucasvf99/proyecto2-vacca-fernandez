@@ -352,7 +352,7 @@ function actualizadora (){
 function agregarAlCarrito (el){
     let titulo = el.target.parentElement.parentElement.children[0].innerText
     let img = el.target.parentElement.parentElement.parentElement.children[0].children[0].outerHTML
-   
+    console.log(img)
     
 
             if(titulo == "Tarrinas"){
@@ -382,102 +382,93 @@ function agregarAlCarrito (el){
                 let bolasHelado = el.target.parentElement.parentElement.children[1].children[1].value 
                 let valorSelect = el.target.parentElement.parentElement.children[1].children[2].children[0].children[1].value
                 let valorSelect2 = el.target.parentElement.parentElement.children[1].children[2].children[1].children[1].value
-                if(bolasHelado == 1 ){
 
-                        if( valorSelect, valorSelect2 == "-- Selecciona Sabor --"  ){
-                            Swal.fire({
-                                title: "Espera...",
-                                text: "Falta elegir un sabor",
-                                icon: "warning"
-                              });
-                        }else{
-                            let precio = el.target.parentElement.parentElement.children[2].innerText
-    
-                            if(carritoArray.some ((el)=> {
-                                return el.titulo == titulo 
-                            })){
-                                let titulos = carritoArray.map(el => el.titulo)
-                                let indice = titulos.indexOf(titulo)
-                            
-                                carritoArray[indice].cantidad ++ 
-                            }else{
-                                carritoArray.push({
-                        
-                                    titulo,
-                                    precio,
-                                    cantidad: 1,
-                                    img
-                                })
-                        }
-                }
-                }else if (bolasHelado == 2 ){
-                    let valorSelect3 = el.target.parentElement.parentElement.children[1].children[2].children[2].children[1].value
-                    if( valorSelect, valorSelect2, valorSelect3== "-- Selecciona Sabor --"  ){
-                        Swal.fire({
-                            title: "Espera...",
-                            text: "Falta elegir un sabor",
-                            icon: "warning"
-                          });
-                    }else{
-                        let precio = el.target.parentElement.parentElement.children[2].innerText
 
-                        if(carritoArray.some ((el)=> {
-                            return el.titulo == titulo 
-                        })){
-                            let titulos = carritoArray.map(el => el.titulo)
-                            let indice = titulos.indexOf(titulo)
-                            
-                            carritoArray[indice].cantidad ++ 
-                        }else{
-                            carritoArray.push({
-                    
-                                titulo,
-                                precio,
-                                cantidad: 1,
-                                img
-                            })
-                    }
-            }
-                }else if (bolasHelado == 3){
-                    let valorSelect3 = el.target.parentElement.parentElement.children[1].children[2].children[2].children[1].value
-                    let valorSelect4 = el.target.parentElement.parentElement.children[1].children[2].children[3].children[1].value
+                validezDeSabores(bolasHelado,valorSelect, valorSelect2,el,titulo,img) 
 
-                    if( valorSelect, valorSelect2, valorSelect3,valorSelect4== "-- Selecciona Sabor --"  ){
-                        Swal.fire({
-                            title: "Espera...",
-                            text: "Falta elegir un sabor",
-                            icon: "warning"
-                          });
-                    }else{
-                        let precio = el.target.parentElement.parentElement.children[2].innerText
-
-                        if(carritoArray.some ((el)=> {
-                            return el.titulo == titulo 
-                        })){
-                            let titulos = carritoArray.map(el => el.titulo)
-                            let indice = titulos.indexOf(titulo)
-                                console.log(titulos)   
-                            carritoArray[indice].cantidad ++  
-                        }else{
-                            carritoArray.push({
-                    
-                                titulo,
-                                precio,
-                                cantidad: 1,
-                                img
-                            })
-                    }
-            }
-                }
-
-              }
+             
+               }
       
 
         localStorage.setItem("carrito", JSON.stringify(carritoArray))
         actualizadora ()
 }
 
+function logicaAgregarAlCarrito (titulo,img){
+    let precio = el.target.parentElement.parentElement.children[4].innerText
 
+
+    if(carritoArray.some ((el)=> {
+        return el.titulo == titulo 
+    })){
+        let titulos = carritoArray.map(el => el.titulo)
+        let indice = titulos.indexOf(titulo)
+       
+        
+        carritoArray[indice].cantidad ++ 
+        Swal.fire({
+            title: "Cantidad Agregada...",
+            icon: "success"
+          });
+        
+    }else{
+        carritoArray.push({
+
+            titulo,
+            precio,
+            cantidad: 1,
+            img
+        })
+        Swal.fire({
+            title: "Agregado al carrito...",
+            icon: "success"
+          });
+          console.log(carritoArray)
+    }
+}
+function validezDeSabores (bolasDeHelado,valorSelect, valorSelect2,el,titulo,img) {
+    if(bolasDeHelado == 1){
+        if( valorSelect, valorSelect2 == "-- Selecciona Sabor --"  ){
+            Swal.fire({
+                title: "Espera...",
+                text: "Falta elegir un sabor",
+                icon: "warning"
+              });
+        }else{
+            logicaAgregarAlCarrito(titulo,img)
+            console.log("me ejecuto de bola helado 1 ")
+        }
+    }else if (bolasDeHelado == 2){
+        let valorSelect3 = el.target.parentElement.parentElement.children[1].children[2].children[2].children[1].value
+
+        if( valorSelect, valorSelect2,valorSelect3 == "-- Selecciona Sabor --"  ){
+            Swal.fire({
+                title: "Espera...",
+                text: "Falta elegir un sabor",
+                icon: "warning"
+              });
+        }else{
+            logicaAgregarAlCarrito(titulo,img)
+            console.log("me ejecuto de bola helado 2 ")
+
+        }
+    }else if(bolasDeHelado == 3){
+        let valorSelect3 = el.target.parentElement.parentElement.children[1].children[2].children[2].children[1].value
+        let valorSelect4 = el.target.parentElement.parentElement.children[1].children[2].children[3].children[1].value
+
+        if( valorSelect, valorSelect2,valorSelect3,valorSelect4 == "-- Selecciona Sabor --"  ){
+            Swal.fire({
+                title: "Espera...",
+                text: "Falta elegir un sabor",
+                icon: "warning"
+              });
+        }else{
+            logicaAgregarAlCarrito(titulo,img)
+            console.log("me ejecuto de bola helado 3 ")
+
+        }
+    }
+}
 
 //agregar productos 
 
