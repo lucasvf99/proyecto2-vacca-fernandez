@@ -19,7 +19,6 @@ const   mostrarEnHtml = async () => {
     let resSabores = await fetch("../json/sabores.json")
     let dataSabores = await resSabores.json()
 
-   // console.log(data)
     if(nombreProductoLocal == "Copas al Gusto"){
         cajaProductos.innerHTML= `
         <div class="cont-img">
@@ -111,19 +110,16 @@ const mostrarTarrina = async (img,nombre,dataSabores) =>{
                     </div>
             </div>
                 <div id="precio">
-                   
+                    <p>${data.tarrinas.precio1} €</p>
                 </div>
                  <div class="boton-carrito">
                    <button>Agregar al carrito</button>
-                </div>
-                <div id="precio-tarrina">
-                <p>${data.tarrinas.precio1} €</p>
                 </div>
                
     </div> 
   `
     sabores("selector", dataSabores)
-    valorDeOptionTarrina("selectorOptionTarrina","precio-tarrina",data,"sabor-3","selector",dataSabores)
+    valorDeOptionTarrina("selectorOptionTarrina","precio",data,"sabor-3","selector",dataSabores)
     agregadoraDeEventos(agregarAlCarrito,"boton-carrito","click")
    
 
@@ -243,21 +239,18 @@ function valorDeOptionTarrina (idSelec,idPrecio,data,idParaSabor,classSelector,d
     const valorSelect = document.getElementById(idSelec)
     valorSelect.addEventListener("change", () =>{
         let optionValor = valorSelect.value;
-        console.log(optionValor)
-        if(optionValor == 0){
+        if(optionValor == 1){
             let idParaPrecio = document.getElementById(idPrecio)
-          
             idParaPrecio.innerHTML= "" 
+            agregarPrecioTarrina(idPrecio,data)
             
-        }else if (optionValor == 1){
+            
+        }else if (optionValor == 2){
             let id3Sabor = document.getElementById(idParaSabor)
             
             id3Sabor.innerHTML =""
-            agregarPrecioTarrina(idPrecio,data)
-            
-        }else if (optionValor == 2){
             agregarPrecioTarrina2(idPrecio,data,idParaSabor,classSelector,dataSabores)
-
+            
         }
     })
        
@@ -310,6 +303,7 @@ function mostrarCarrito (){
             </div>
             <h4> ${el.titulo}</h4>
         <p>${el.precio}</p>
+
         <div class="caja-botones-productos"> 
         <button class="eliminar-producto">-</button>
                     <p>${el.cantidad}</p>
@@ -352,32 +346,16 @@ function actualizadora (){
 function agregarAlCarrito (el){
     let titulo = el.target.parentElement.parentElement.children[0].innerText
     let img = el.target.parentElement.parentElement.parentElement.children[0].children[0].outerHTML
-    console.log(img)
     
 
             if(titulo == "Tarrinas"){
+                let bolasHelado = el.target.parentElement.parentElement.children[1].children[1].value 
+                let valorSelect = el.target.parentElement.parentElement.children[1].children[2].children[0].children[1].value
+                let valorSelect2 = el.target.parentElement.parentElement.children[1].children[2].children[1].children[1].value
 
-                let precio = el.target.parentElement.parentElement.children[4].innerText
+                validezDeSabores(bolasHelado,valorSelect, valorSelect2,el,titulo,img) 
 
-                if(carritoArray.some ((el)=> {
-                    return el.titulo == titulo 
-                })){
-                    let titulos = carritoArray.map(el => el.titulo)
-                    let indice = titulos.indexOf(titulo)
-                   
-                    
-                    carritoArray[indice].cantidad ++ 
-                    
-                }else{
-                    carritoArray.push({
-            
-                        titulo,
-                        precio,
-                        cantidad: 1,
-                        img
-                    })
-                    
-                }
+           
             }else if (titulo == "Copas al Gusto"){
                 let bolasHelado = el.target.parentElement.parentElement.children[1].children[1].value 
                 let valorSelect = el.target.parentElement.parentElement.children[1].children[2].children[0].children[1].value
@@ -394,9 +372,7 @@ function agregarAlCarrito (el){
         actualizadora ()
 }
 
-function logicaAgregarAlCarrito (titulo,img){
-    let precio = el.target.parentElement.parentElement.children[4].innerText
-
+function logicaAgregarAlCarrito (titulo,img,precio){
 
     if(carritoArray.some ((el)=> {
         return el.titulo == titulo 
@@ -423,10 +399,11 @@ function logicaAgregarAlCarrito (titulo,img){
             title: "Agregado al carrito...",
             icon: "success"
           });
-          console.log(carritoArray)
     }
 }
 function validezDeSabores (bolasDeHelado,valorSelect, valorSelect2,el,titulo,img) {
+    let precio =  el.target.parentElement.parentElement.children[2].children[0].innerText
+    console.log(precio)
     if(bolasDeHelado == 1){
         if( valorSelect, valorSelect2 == "-- Selecciona Sabor --"  ){
             Swal.fire({
@@ -435,7 +412,7 @@ function validezDeSabores (bolasDeHelado,valorSelect, valorSelect2,el,titulo,img
                 icon: "warning"
               });
         }else{
-            logicaAgregarAlCarrito(titulo,img)
+            logicaAgregarAlCarrito(titulo,img,precio)
             console.log("me ejecuto de bola helado 1 ")
         }
     }else if (bolasDeHelado == 2){
@@ -448,7 +425,7 @@ function validezDeSabores (bolasDeHelado,valorSelect, valorSelect2,el,titulo,img
                 icon: "warning"
               });
         }else{
-            logicaAgregarAlCarrito(titulo,img)
+            logicaAgregarAlCarrito(titulo,img,precio)
             console.log("me ejecuto de bola helado 2 ")
 
         }
@@ -463,11 +440,12 @@ function validezDeSabores (bolasDeHelado,valorSelect, valorSelect2,el,titulo,img
                 icon: "warning"
               });
         }else{
-            logicaAgregarAlCarrito(titulo,img)
+            logicaAgregarAlCarrito(titulo,img,precio)
             console.log("me ejecuto de bola helado 3 ")
 
         }
     }
+    console.log(carritoArray)
 }
 
 //agregar productos 
