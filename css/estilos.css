@@ -1041,6 +1041,18 @@ footer .cont-footer .foot-info ul li a {
   transition-timing-function: ease;
 }
 
+.caja-producto .sabores {
+  display: flex;
+  flex-direction: column;
+}
+.caja-producto .sabores h4 {
+  font-size: 20px !important;
+}
+.caja-producto .sabores #sabores-nuevos {
+  list-style: circle;
+  font-size: 13px;
+}
+
 * {
   margin: 0;
   padding: 0;

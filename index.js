@@ -46,7 +46,7 @@ const creadoraDeProductos = async  () =>{
             <div class="batido-item">
                 <div>
                     <a href="">
-                        <img src="${el.img}" alt="batido-mostro">
+                        <img src="${el.img}" alt="">
                     </a>
                 </div>
                     <div>
@@ -131,7 +131,7 @@ function mostrarCarrito (){
         let total = carritoArray.reduce((acumulador, i) => {
             return acumulador + parseInt(i.precio) * parseInt(i.cantidad) 
         },  0)
-        carritoDOM.innerHTML += ` <div><p class= "total-carrito"> Total : ${total}</p></div>`
+        carritoDOM.innerHTML += ` <div><p class= "total-carrito"> Total : ${total} €</p></div>`
         carritoDOM.innerHTML += ` <div>
                                         <button class="terminar-compra">Terminar compra</button>
                                         <button class="limpiar-carrito">Limpiar carrito</button>
@@ -202,6 +202,32 @@ function limpiarCarrito (){
 
 // agregando array de procuctos al carrito 
 
+function sweetAlertAgregar (){
+    Swal.fire({
+        title: "Producto agregado",
+        icon: "success",
+        showConfirmButton: false,
+        timer: 1000,
+        themes : "Dark",
+        showClass: {
+            popup: `
+              animate__animated
+              animate__fadeInUp
+              animate__faster
+            `
+          },
+          hideClass: {
+            popup: `
+              animate__animated
+              animate__fadeOutDown
+              animate__faster
+            `
+          }
+    
+
+      });
+}
+
 function agregarCarrito (e){
     let titulo = (e.target.parentElement.children[0].innerText)
     let precio = (e.target.parentElement.children[1].innerText)
@@ -226,10 +252,7 @@ function agregarCarrito (e){
         })
     }
     //boton sweet 
-     Swal.fire({
-        title: "Producto agregado",
-        icon: "success"
-      });
+    sweetAlertAgregar()
     
     localStorage.setItem("carrito", JSON.stringify(carritoArray))
     actualizadora ()
@@ -301,3 +324,4 @@ agregadoraDeEventos(conseguirDatosTarrina,"apartado", "click")
 
 
 
+// overmouse 
